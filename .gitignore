@@ -1,3 +1,8 @@
+# ralphy loop state (local pilot artefacts)
+.ralphy/progress.txt
+.ralphy/.last-run
+.ralphy/archive/
+
 # OS
 .DS_Store
 Thumbs.db

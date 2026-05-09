@@ -1,10 +1,16 @@
 """
-业务服务模块
+Business services module
 """
 
 from .ontology_generator import OntologyGenerator
 from .graph_builder import GraphBuilderService
 from .text_processor import TextProcessor
+from .doc_translator import (
+    translate_file_if_needed,
+    translate_text,
+    should_translate,
+    korean_ratio,
+)
 from .zep_entity_reader import ZepEntityReader, EntityNode, FilteredEntities
 from .oasis_profile_generator import OasisProfileGenerator, OasisAgentProfile
 from .simulation_manager import SimulationManager, SimulationState, SimulationStatus
@@ -69,5 +75,9 @@ __all__ = [
     'IPCResponse',
     'CommandType',
     'CommandStatus',
+    'translate_file_if_needed',
+    'translate_text',
+    'should_translate',
+    'korean_ratio',
 ]
 

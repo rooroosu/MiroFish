@@ -1,0 +1,27 @@
+project:
+  name: "MiroFish"
+  language: "TypeScript"
+  framework: "Node.js (frontend + backend monorepo)"
+
+commands:
+  build: "npm run build"
+  dev: "npm run dev"
+
+rules:
+  - "Per-file git add only — never -A or ."
+  - "Never read or write .env* files; reference secrets by path:line only"
+  - "Do not modify .claude/, .codex/, or .opencode/ directories"
+
+boundaries:
+  never_touch:
+    - ".env*"
+    - "credentials*"
+    - "*.pem"
+    - "id_rsa*"
+    - ".aws/credentials"
+    - ".kube/config"
+    - ".claude/**"
+    - ".codex/**"
+    - ".opencode/**"
+    - ".ralphy/**"
+    - ".git/**"

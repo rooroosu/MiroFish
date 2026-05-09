@@ -1,0 +1,5 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "alibaba/qwen3.6-plus",
+  "small_model": "deepseek/deepseek-v4-flash"
+}

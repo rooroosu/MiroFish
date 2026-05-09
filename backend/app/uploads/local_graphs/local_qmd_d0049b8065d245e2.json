@@ -1,0 +1,1726 @@
+{
+  "graph_id": "local_qmd_d0049b8065d245e2",
+  "name": "NU_bear_miss",
+  "description": "MiroFish local_qmd graph",
+  "created_at": "2026-04-24T09:51:31.315258+00:00",
+  "ontology": {
+    "entity_types": [
+      {
+        "name": "CompanyExecutive",
+        "description": "Company leadership roles such as CEO, CFO, and Chairman",
+        "attributes": [
+          {
+            "name": "full_name",
+            "type": "text",
+            "description": "Full legal name of the executive"
+          },
+          {
+            "name": "title",
+            "type": "text",
+            "description": "Current job title within the company"
+          },
+          {
+            "name": "tenure_years",
+            "type": "number",
+            "description": "Years of service in current role"
+          }
+        ],
+        "examples": [
+          "David Vélez",
+          "Guilherme Lago"
+        ]
+      },
+      {
+        "name": "InvestmentAnalyst",
+        "description": "Sell-side analysts providing ratings and reports on public companies",
+        "attributes": [
+          {
+            "name": "full_name",
+            "type": "text",
+            "description": "Full legal name of the analyst"
+          },
+          {
+            "name": "firm_name",
+            "type": "text",
+            "description": "Name of the investment bank or firm"
+          },
+          {
+            "name": "rating_history",
+            "type": "text",
+            "description": "Recent rating changes or history"
+          }
+        ],
+        "examples": [
+          "Jorge Kuri",
+          "Mario Pierry"
+        ]
+      },
+      {
+        "name": "RetailInvestor",
+        "description": "Individual investors trading on social media platforms",
+        "attributes": [
+          {
+            "name": "full_name",
+            "type": "text",
+            "description": "Display name or handle on social media"
+          },
+          {
+            "name": "risk_tolerance",
+            "type": "text",
+            "description": "Risk profile (e.g., Conservative, Aggressive)"
+          },
+          {
+            "name": "avg_position_size",
+            "type": "number",
+            "description": "Average number of shares held"
+          }
+        ],
+        "examples": [
+          "MomentumTrader99",
+          "ValueSeeker2026"
+        ]
+      },
+      {
+        "name": "FundManager",
+        "description": "Institutional investors managing large portfolios",
+        "attributes": [
+          {
+            "name": "full_name",
+            "type": "text",
+            "description": "Name of the fund manager"
+          },
+          {
+            "name": "fund_name",
+            "type": "text",
+            "description": "Name of the investment fund"
+          },
+          {
+            "name": "investment_strategy",
+            "type": "text",
+            "description": "Strategy type (e.g., Short-seller, Value)"
+          }
+        ],
+        "examples": [
+          "HedgeFundAlpha",
+          "ShortSellerGroup"
+        ]
+      },
+      {
+        "name": "PublicCompany",
+        "description": "Publicly traded companies with stock listings",
+        "attributes": [
+          {
+            "name": "org_name",
+            "type": "text",
+            "description": "Official company name"
+          },
+          {
+            "name": "ticker_symbol",
+            "type": "text",
+            "description": "Stock exchange ticker symbol"
+          },
+          {
+            "name": "market_cap",
+            "type": "number",
+            "description": "Current market capitalization"
+          }
+        ],
+        "examples": [
+          "Nu Holdings",
+          "Mercado Libre"
+        ]
+      },
+      {
+        "name": "CompetitorCompany",
+        "description": "Companies competing in the same industry sector",
+        "attributes": [
+          {
+            "name": "org_name",
+            "type": "text",
+            "description": "Official company name"
+          },
+          {
+            "name": "market_share",
+            "type": "number",
+            "description": "Estimated market share percentage"
+          },
+          {
+            "name": "primary_product",
+            "type": "text",
+            "description": "Main product or service offered"
+          }
+        ],
+        "examples": [
+          "Itaú Unibanco",
+          "Inter Bank"
+        ]
+      },
+      {
+        "name": "InvestmentBank",
+        "description": "Financial institutions providing investment banking services",
+        "attributes": [
+          {
+            "name": "org_name",
+            "type": "text",
+            "description": "Official bank name"
+          },
+          {
+            "name": "headquarters",
+            "type": "text",
+            "description": "Location of main headquarters"
+          },
+          {
+            "name": "coverage_focus",
+            "type": "text",
+            "description": "Primary sectors or regions covered"
+          }
+        ],
+        "examples": [
+          "Morgan Stanley",
+          "BTG Pactual"
+        ]
+      },
+      {
+        "name": "RegulatoryAgency",
+        "description": "Government bodies regulating financial markets",
+        "attributes": [
+          {
+            "name": "org_name",
+            "type": "text",
+            "description": "Official agency name"
+          },
+          {
+            "name": "jurisdiction",
+            "type": "text",
+            "description": "Geographic area of authority"
+          },
+          {
+            "name": "regulation_type",
+            "type": "text",
+            "description": "Type of regulations enforced"
+          }
+        ],
+        "examples": [
+          "Central Bank of Brazil",
+          "OCC"
+        ]
+      },
+      {
+        "name": "Person",
+        "description": "Any natural person not fitting specific categories",
+        "attributes": [
+          {
+            "name": "full_name",
+            "type": "text",
+            "description": "Full legal name of the person"
+          },
+          {
+            "name": "occupation",
+            "type": "text",
+            "description": "General occupation or profession"
+          },
+          {
+            "name": "location",
+            "type": "text",
+            "description": "Current location or residence"
+          }
+        ],
+        "examples": [
+          "John Doe",
+          "Jane Smith"
+        ]
+      },
+      {
+        "name": "Organization",
+        "description": "Any organization not fitting specific categories",
+        "attributes": [
+          {
+            "name": "org_name",
+            "type": "text",
+            "description": "Official organization name"
+          },
+          {
+            "name": "founded_year",
+            "type": "number",
+            "description": "Year the organization was established"
+          },
+          {
+            "name": "headquarters",
+            "type": "text",
+            "description": "Location of main headquarters"
+          }
+        ],
+        "examples": [
+          "Local Community Group",
+          "Small Business LLC"
+        ]
+      }
+    ],
+    "edge_types": [
+      {
+        "name": "WORKS_FOR",
+        "description": "Indicates employment relationship between person and organization",
+        "source_targets": [
+          {
+            "source": "CompanyExecutive",
+            "target": "PublicCompany"
+          },
+          {
+            "source": "InvestmentAnalyst",
+            "target": "InvestmentBank"
+          }
+        ],
+        "attributes": []
+      },
+      {
+        "name": "INVESTS_IN",
+        "description": "Indicates investment holding from investor to company",
+        "source_targets": [
+          {
+            "source": "RetailInvestor",
+            "target": "PublicCompany"
+          },
+          {
+            "source": "FundManager",
+            "target": "PublicCompany"
+          }
+        ],
+        "attributes": []
+      },
+      {
+        "name": "REPORTS_ON",
+        "description": "Indicates analyst coverage of a specific company",
+        "source_targets": [
+          {
+            "source": "InvestmentAnalyst",
+            "target": "PublicCompany"
+          }
+        ],
+        "attributes": []
+      },
+      {
+        "name": "REGULATES",
+        "description": "Indicates regulatory oversight of a company",
+        "source_targets": [
+          {
+            "source": "RegulatoryAgency",
+            "target": "PublicCompany"
+          }
+        ],
+        "attributes": []
+      },
+      {
+        "name": "COMPETES_WITH",
+        "description": "Indicates competitive relationship between companies",
+        "source_targets": [
+          {
+            "source": "PublicCompany",
+            "target": "CompetitorCompany"
+          }
+        ],
+        "attributes": []
+      },
+      {
+        "name": "FOLLOWS",
+        "description": "Indicates social media following relationship",
+        "source_targets": [
+          {
+            "source": "RetailInvestor",
+            "target": "InvestmentAnalyst"
+          },
+          {
+            "source": "RetailInvestor",
+            "target": "PublicCompany"
+          }
+        ],
+        "attributes": []
+      },
+      {
+        "name": "RESPONDS_TO",
+        "description": "Indicates social media reply or comment interaction",
+        "source_targets": [
+          {
+            "source": "RetailInvestor",
+            "target": "CompanyExecutive"
+          },
+          {
+            "source": "InvestmentAnalyst",
+            "target": "PublicCompany"
+          }
+        ],
+        "attributes": []
+      },
+      {
+        "name": "MENTIONS",
+        "description": "Indicates social media mention of an entity",
+        "source_targets": [
+          {
+            "source": "InvestmentAnalyst",
+            "target": "CompetitorCompany"
+          },
+          {
+            "source": "RetailInvestor",
+            "target": "PublicCompany"
+          }
+        ],
+        "attributes": []
+      }
+    ]
+  },
+  "episodes": [
+    {
+      "uuid": "episode_80a2b68935e14b43",
+      "type": "text",
+      "data": "=== NU_2025-Q4.md ===\n# Nu Holdings (NU) — Q4 2025 Earnings Call Analysis\n\n> **분석일**: 2026년 3월 24일 | **실적 발표**: 2025년 Q4 (FY2025) | **어닝콜 일자**: 2026년 2월 25일\n> **참석 경영진**: David Vélez (Founder, CEO & Chairman), Guilherme Lago (CFO), Guilherme Souto (IR)\n\n---\n\n## Phase 0: Investment Thesis Connection\n\n### 참조 기존 분석\n- **NU_Qualitative_Analysis_2026-03-24.md** — 정성적 기업 분석 (투자 아이디어 3개, 12-Item Checklist Grade B+, Roundtable Consensus Buy Moderate-High)",
+      "processed": true
+    },
+    {
+      "uuid": "episode_57840a28f6d34db8",
+      "type": "text",
+      "data": "rade B+, Roundtable Consensus Buy Moderate-High)\n\n### 핵심 투자 아이디어 (기존 보고서)\n1. **Idea 1 (Confidence H)**: ARPAC $15→$22-25 크로스셀 성장 엔진 과소평가\n2. **Idea 2 (Confidence M)**: AI 언더라이팅이 진정한 모트 — \"핀테크 = 높은 NPL\" 편견 극복\n3. **Idea 3 (Confidence L)**: 미국 시장 진출 — 비연속적 TAM 확대\n\n### 이번 어닝콜에서 답해야 할 5가지 검증 질문",
+      "processed": true
+    },
+    {
+      "uuid": "episode_51e17d49c80b429a",
+      "type": "text",
+      "data": "장 진출 — 비연속적 TAM 확대\n\n### 이번 어닝콜에서 답해야 할 5가지 검증 질문\n\n| # | 검증 질문 | 근거 (기존 보고서) | 연결 Warning Signal |\n|---|---------|-----------------|-------------------|\n| V1 | ARPAC QoQ 성장률이 5%+ 유지되고 있는가? | Q3→Q4 QoQ 추이가 크로스셀 모멘텀 유지 여부 판단 핵심 | Q3 Warning: \"ARPAC QoQ 3분기 연속 3% 미만 시 천장 신호\" |\n| V2 | Fee income 비중이 15-17%에서 상승 추세를 보이는가? | Munger의 \"레버리지 vs 크로스셀\" 논쟁 해소 핵심 지표 | Q3 Warning: \"4분기 연속 15% 미만 시 레버리지 스토리 확정\" |\n| V3 | Recent vintage 대출의 초기 연체율이 안정적인가?",
+      "processed": true
+    },
+    {
+      "uuid": "episode_f3fb3eb1ff424cec",
+      "type": "text",
+      "data": "토리 확정\" |\n| V3 | Recent vintage 대출의 초기 연체율이 안정적인가? | AI 언더라이팅 품질의 실질적 검증 | Q3 Warning: \"이전 코호트 대비 150bps+ 악화 시 AI 모트 훼손\" |\n| V4 | 멕시코 ARPAC과 고객 성장이 가속되고 있는가? | 이식성(portability) 검증 | Q3 Warning: \"3분기 연속 정체/하락 시 가설 기각\" |\n| V5 | 미국 진출 비용 규모와 자원 배분 규율이 확인되는가? | Munger의 기회비용 논점 vs Lynch의 내러티브 가치 | 미국 CAC가 중남미의 5배+ 시 우려 |\n\n---\n\n## Phase 1: Core Analysis\n\n### Module A: Financial Highlights",
+      "processed": true
+    },
+    {
+      "uuid": "episode_b58919023b1f48f5",
+      "type": "text",
+      "data": "ore Analysis\n\n### Module A: Financial Highlights\n\n| Metric | Q4 2025 | Q3 2025 | Q4 2024 | YoY Δ | QoQ Δ | Consensus | Beat/Miss |\n|--------|---------|---------|---------|-------|-------|-----------|-----------|\n| Revenue | $4.9B | $4.6B* | $3.4B | +45% | +7% | $3.79B | **Beat +29%** |\n| Gross Profit | $1.96B | $1.83B | $1.42B | +38% | +7% | — | — |\n| Net Income | $894.8M | $791M | $596M | +50% | +13% | ~$880M | **Beat** |\n| EPS | $0.18 | $0.16 | $0.12 | +50% | +13% | $0.18 | **In-line** |\n| ROE",
+      "processed": true
+    },
+    {
+      "uuid": "episode_8c2147efa98749e9",
+      "type": "text",
+      "data": "$0.12 | +50% | +13% | $0.18 | **In-line** |\n| ROE | 33% | 30% | 28% | +500bps | +300bps | — | **Record** |\n| ARPAC | $15.0 | $13.8* | $11.8 | +27% | +9% | — | — |\n| Total Customers | 131M | 127M | 114M | +15% | +3% | — | — |\n| Activity Rate | 83% | 82% | 82% | +100bps | +100bps | — | — |\n| Efficiency Ratio | 19.9% | 20.3% | 22.1% | -220bps | -40bps | — | **Record** |\n| 15-90 NPL | 4.1% | 4.3% | 4.4% | -30bps | -20bps | — | **개선** |\n| 90+ NPL | 6.6% | 6.7% | 6.9% | -30bps | -10bps | — | **개선** |",
+      "processed": true
+    },
+    {
+      "uuid": "episode_eff2c3438e5b49a5",
+      "type": "text",
+      "data": ".6% | 6.7% | 6.9% | -30bps | -10bps | — | **개선** |\n| Credit Portfolio | $32.7B | $29.4B* | $23.4B | +40% | +11% | — | — |\n| Total Deposits | $41.9B | $38.4B* | $32.5B | +29% | +9% | — | — |\n| FCF (FY2025) | $2.5B | — | — | — | — | — | — |\n\n*Q3 2025 수치는 추정치 포함\n\n**주요 비반복 항목 (Non-Recurring Items)**:\n- DTA 재측정 이익: +$58M (브라질 법인세율 40%→45% 인상에 따른 이연법인세 재측정)\n- PROSOFIPO 부담금: -$25M (멕시코 규제 부과금, 일회성)\n- Return-to-Office 충당금: -$22M (사무실 복귀 관련 일시 비용)",
+      "processed": true
+    },
+    {
+      "uuid": "episode_b88f82f72bd2421a",
+      "type": "text",
+      "data": "- Return-to-Office 충당금: -$22M (사무실 복귀 관련 일시 비용)\n\n**Thesis Connection**: 헤드라인 수치는 투자 아이디어를 강력하게 지지한다. Revenue beat 29%는 시장 예상을 크게 상회하며, ARPAC $15 (QoQ +9%)는 V1 검증 질문을 명확히 통과한다. ROE 33% record는 \"핀테크 = 낮은 수익성\" 내러티브를 완전히 기각하며, NPL 동시 개선(15-90: 4.1%, 90+: 6.6%)은 성장과 신용 품질의 동반 개선을 입증한다. 다만 EPS가 컨센서스와 정확히 일치($0.18)한 것은 비반복 항목들이 상쇄된 결과이며, 매출 beat 대비 이익 beat 폭이 작다는 점은 비용 구조 변화의 시작을 시사한다.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_95d98644b74c4aa6",
+      "type": "text",
+      "data": "매출 beat 대비 이익 beat 폭이 작다는 점은 비용 구조 변화의 시작을 시사한다.\n\n---\n\n### Module B: Management's Core Message\n\n경영진 준비 발언(Prepared Remarks)에서 도출한 5대 전략 테마:\n\n**Theme 1: \"2026년은 변곡점의 해(Inflection Year)\"**\n\nCEO David Vélez는 어닝콜 서두에서 \"2025 was a fantastic year for Nubank, and Q4 '25 truly showed the strength of our business model\"이라며 2025년 성과를 자축한 뒤, 2026년을 \"중남미 리더에서 글로벌 디지털 뱅킹 플랫폼으로의 전환이 시작되는 변곡점\"으로 프레이밍했다. 이는 미국 OCC 승인 이후 전략적 내러티브를 의도적으로 확장하는 것으로, 이전 분기까지 \"중남미 심화\"에 집중했던 톤과 뚜렷한 차이를 보인다.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_fc03d5f689584adf",
+      "type": "text",
+      "data": "확장하는 것으로, 이전 분기까지 \"중남미 심화\"에 집중했던 톤과 뚜렷한 차이를 보인다.\n\n**Theme 2: 효율성 비율 20% 하회 달성 → 그러나 단기 상승 압력 예고**\n\n효율성 비율이 19.9%로 처음 20%를 하회했다. 그러나 CFO Lago는 즉시 \"upward pressure expected in the next 4 to 6 quarters due to investments in AI, global expansion, and return to office\"라고 선제적으로 비용 증가를 예고했다. Return-to-Office만으로 80-100bps 영향을 미칠 것이라는 구체적 수치를 제시한 것은 투자자 기대치 관리에 매우 적극적이다. 이전 분기에는 효율성 개선을 강조했으나, 이번에는 \"deliberate investments in long-term capacity building\"이라는 표현으로 비용 증가의 전략적 정당성을 선제적으로 구축하고 있다.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_7a17fd60108e44e3",
+      "type": "text",
+      "data": "building\"이라는 표현으로 비용 증가의 전략적 정당성을 선제적으로 구축하고 있다.\n\n**Theme 3: AI를 핵심 경쟁 우위로 격상 — nuFormer 모델 전면 배치**\n\nVélez는 AI 전략을 \"향후 10년 Nu 확장의 핵심\"에서 더 나아가, nuFormer(자체 foundation model)를 브라질 대출과 멕시코 신용카드까지 확장하겠다고 발표했다. \"AI-powered personal banker\"라는 비전을 제시하며, AI가 단순 언더라이팅을 넘어 고객 경험 전체를 재정의하는 방향으로 전략이 진화하고 있다. 이전 분기 대비 AI 관련 발언의 비중과 구체성이 모두 증가했다.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_3eed51c99fe04b5e",
+      "type": "text",
+      "data": "전략이 진화하고 있다. 이전 분기 대비 AI 관련 발언의 비중과 구체성이 모두 증가했다.\n\n**Theme 4: 미사용 신용한도 $29B — 성장 활주로의 정량적 증거**\n\nCFO Lago는 미사용 신용한도가 $18B에서 $29B로 60% 증가했다고 공개했다. 이는 AI 신용 모델의 개선으로 더 많은 고객에게 한도를 부여할 수 있게 되었음을 의미하며, 향후 대출 포트폴리오 성장의 \"장전된 탄약\"이다. 이 수치는 이전 분기에 공개되지 않았던 신규 데이터 포인트로, 경영진이 성장 지속 가능성에 대한 시장 우려를 선제적으로 해소하려는 의도가 읽힌다.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_41caa9e7b1824693",
+      "type": "text",
+      "data": "로, 경영진이 성장 지속 가능성에 대한 시장 우려를 선제적으로 해소하려는 의도가 읽힌다.\n\n**Theme 5: 지역별 차별화 전략 — 브라질 심화, 멕시코 가속, 콜롬비아 확장, 미국 탐색**\n\n각 시장에 대한 전략이 이전보다 더 세분화되었다. 브라질은 mass market 심화 + affluent 세그먼트(YoY +40%) + \"super core\" 소득 구간(월 BRL 5,000-12,000, YoY +100%) 확장이라는 3축 전략을 제시했다. 멕시코는 은행 라이센스 확보가 \"credit growth의 핵심 전제조건\"임을 강조했고, 콜롬비아는 구독형 신용카드로 승인율을 3배 확대했다는 구체적 성과를 발표했다. 미국은 \"very targeted strategy focused on specific sub-segments and niches\"라는 신중한 표현을 사용하여, 대규모 투자보다는 탐색적 접근임을 명확히 했다.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_0a64ba5719854775",
+      "type": "text",
+      "data": "iches\"라는 신중한 표현을 사용하여, 대규모 투자보다는 탐색적 접근임을 명확히 했다.\n\n---\n\n### Module C: Complete Q&A Record\n\n> **Q1. Eduardo Rosman (BTG Pactual) — AI disruption risk & 신용 수익의 지속 가능성**\n>\n> Q: AI와 핀테크의 급격한 발전이 Nu의 기존 비즈니스 모델, 특히 신용 기반 수익을 근본적으로 위협할 수 있는지에 대해 질문했다. AI 기술이 범용화되면 Nu의 AI 언더라이팅 우위가 사라지지 않겠는지에 대한 우려를 표명했다.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_81ebbca601294a2d",
+      "type": "text",
+      "data": "술이 범용화되면 Nu의 AI 언더라이팅 우위가 사라지지 않겠는지에 대한 우려를 표명했다.\n>\n> A: Vélez는 \"credit revenue is actually the most sustainable type of revenue in financial services\"라고 강조하며, 신용 사업은 규제 자본 요건과 라이센스 장벽이 높아 AI 기술만으로는 쉽게 진입할 수 없다고 설명했다. 핀테크가 예금이나 결제에서는 경쟁이 심화될 수 있지만, 대출은 규제와 자본 집약성이 자연적 모트를 형성한다는 논리다. Nu의 차별화는 AI 기술 자체가 아니라, 131M 고객의 행동 데이터와 규제 라이센스를 결합한 \"full-stack 역량\"에 있다고 덧붙였다.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_ac92205f36c44b56",
+      "type": "text",
+      "data": "의 행동 데이터와 규제 라이센스를 결합한 \"full-stack 역량\"에 있다고 덧붙였다.\n>\n> **Assessment**: Vélez의 답변은 Idea 2 (AI 모트)를 직접 지지한다. \"신용 수익의 지속 가능성\"이라는 프레이밍은 Munger의 \"레버리지 스토리\" 우려에 대한 경영진의 반박으로 읽힌다 — 대출 확대가 나쁜 것이 아니라 오히려 가장 방어 가능한 수익원이라는 주장이다. 다만 fee income 비중 확대에 대한 직접적 언급은 없었다.\n\n---\n\n> **Q2. Jorge Kuri (Morgan Stanley) — 신용카드 한도 확대 & FGTS 규제 영향**\n>\n> Q: 미사용 신용한도가 $18B→$29B로 60% 급증한 배경과, FGTS(근로자 강제저축기금) 규제 변경이 대출 포트폴리오에 미치는 영향을 질문했다. 한도 확대가 AI 모델 개선에 의한 것인지, 아니면 더 공격적인 성장 전략의 결과인지 구분해달라고 요청했다.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_838b287e2bf6410a",
+      "type": "text",
+      "data": "델 개선에 의한 것인지, 아니면 더 공격적인 성장 전략의 결과인지 구분해달라고 요청했다.\n>\n> A: Lago는 한도 확대가 \"AI credit models의 개선\"에 의한 것이라고 명확히 답했다. AI 모델이 고객별 리스크를 더 정교하게 측정할 수 있게 되면서, 기존에 보수적으로 책정했던 한도를 상향할 수 있었다고 설명했다. FGTS 규제 관련해서는, 2025년 11월부터 실행량(originations)이 50-60% 감소했으며, 이 규제 영향을 제외하면 Q4 포트폴리오 순성장률은 보고된 11%가 아닌 \"13% to 14%\"였을 것이라고 밝혔다.\n>\n> **Assessment**: V3(AI 모트 검증)에 직접 연관. 한도 확대가 모델 개선에 의한 것이라면 긍정적이지만, Munger 관점에서는 \"한도를 올려주면 단기적으로 NPL이 낮아 보이는 것 아닌가?\"라는 역질문이 가능하다. FGTS 영향 제외 시 13-14% 성장이라는 데이터는 기저 성장력이 건강하다는 증거.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_7bf4ea2eb18c4ce5",
+      "type": "text",
+      "data": "FGTS 영향 제외 시 13-14% 성장이라는 데이터는 기저 성장력이 건강하다는 증거.\n\n---\n\n> **Q3. Yuri Fernandes (JPMorgan) — 세금 & 규제 비용 영향**\n>\n> Q: 브라질 법인세율 인상(40%→45%)에 따른 DTA 재측정 효과($58M)와, 멕시코 PROSOFIPO 부담금($25M)이 향후 지속적으로 발생하는지 질문했다.\n>\n> A: Lago는 DTA 재측정은 일회성 긍정 효과이며, 향후에는 오히려 높아진 세율이 순이익에 부정적으로 작용할 것이라고 솔직하게 설명했다. 멕시코 PROSOFIPO 부담금도 일회성이나, 멕시코 규제 환경이 점차 정비되면서 유사한 규제 비용이 발생할 가능성이 있다고 인정했다.\n>\n> **Assessment**: 경영진의 소통 투명성(Checklist C3)을 확인하는 교환. DTA의 긍정 효과를 부각하지 않고 오히려 \"향후 세율 부담\"을 선제적으로 언급한 것은 가이던스 신뢰성을 높이는 소통 방식이다.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_9588649732784c33",
+      "type": "text",
+      "data": "려 \"향후 세율 부담\"을 선제적으로 언급한 것은 가이던스 신뢰성을 높이는 소통 방식이다.\n\n---\n\n> **Q4. Mario Pierry (Bank of America) — 충당금 증가 원인 & 자산 건전성**\n>\n> Q: Q4 대손충당금(CLA, Credit Loss Allowance)이 증가한 원인이 대출 품질 악화인지 성장에 의한 것인지 직접적으로 질문했다. 또한 장기 효율성 비율 목표를 구체적으로 요청했다.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_346d1a0e56764278",
+      "type": "text",
+      "data": "에 의한 것인지 직접적으로 질문했다. 또한 장기 효율성 비율 목표를 구체적으로 요청했다.\n>\n> A: Lago는 CLA 증가가 \"entirely attributed to growth, not to any type of asset quality deterioration\"이라고 단호하게 답했다. NPL 지표(15-90: 4.1% QoQ -20bps, 90+: 6.6% QoQ -10bps)가 모두 개선되고 있으며, NPL formation rate도 3.6-3.5%로 안정적이라고 강조했다. 장기 효율성 비율에 대해서는 구체적 수치 목표를 제시하지 않았으나, \"close to 40%\"라는 업계 벤치마크를 2027-2028년까지 달성하겠다는 방향은 제시했다. (※ 이 효율성 비율 목표는 별도 소스에서 확인된 것으로, 어닝콜에서의 정확한 맥락은 후속 확인 필요.)\n>\n> **Assessment**: V3(AI 모트)를 가장 직접적으로 검증하는 교환.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_a61689e44200452a",
+      "type": "text",
+      "data": ">\n> **Assessment**: V3(AI 모트)를 가장 직접적으로 검증하는 교환. \"성장에 의한 충당금 증가이지 자산 품질 악화가 아니다\"라는 경영진의 단언은 현재로서는 NPL 데이터와 일치한다. 다만 Munger가 지적한 \"vintage별 NPL\"에 대한 구체적 답변은 없었으며, 이는 경영진이 이 데이터를 자발적으로 공개하지 않는다는 점을 시사한다.\n\n---\n\n> **Q5. Gustavo Schroden (Citi) — Secured lending & Affluent 세그먼트**\n>\n> Q: 공공 급여 담보대출(public payroll loans)과 민간 위탁대출(private consignado)의 확장 전망, 그리고 affluent 고객 세그먼트의 성장 현황을 질문했다.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_9ead2c24bc064caa",
+      "type": "text",
+      "data": "gnado)의 확장 전망, 그리고 affluent 고객 세그먼트의 성장 현황을 질문했다.\n>\n> A: Lago는 공공 급여 담보대출에 대해 낙관적 전망을 제시하며, 민간 위탁대출은 \"a matter of when, not a matter of if\"라고 표현했다. 다만 현재 first loss ratio가 \"low double digits\"로, 아직 대규모 확장에 적합한 수준이 아니라고 인정했다. Vélez는 affluent 세그먼트가 YoY +40% 성장하고 있으며, \"super core\" 소득 구간(월 BRL 5,000-12,000)이 YoY +100%로 가장 빠르게 성장하고 있다고 밝혔다.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_e11c2f5a93c34b78",
+      "type": "text",
+      "data": "RL 5,000-12,000)이 YoY +100%로 가장 빠르게 성장하고 있다고 밝혔다.\n>\n> **Assessment**: Affluent 세그먼트 +40%와 super core +100% 데이터는 기존 보고서에서 미포착된 신규 정보다. Nu가 저소득층 전용 플랫폼이 아니라 소득 스펙트럼을 확장하고 있다는 증거이며, 이는 ARPAC 천장을 높이는 방향의 데이터다. Buffett이 보수적으로 추정한 $22-25 천장이 affluent 세그먼트의 높은 ARPAC에 의해 상향될 여지가 있다.\n\n---\n\n> **Q6. Neha Agarwala (HSBC) — 민간 급여 담보대출의 고객 이탈 리스크**\n>\n> Q: 민간 급여 담보대출(private consignado)을 제공할 경우, 기존 무담보 대출 고객이 담보대출로 전환하면서 고마진 상품을 잃는 cannibalization 리스크가 있는지 질문했다.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_650af43fcfab4e11",
+      "type": "text",
+      "data": "로 전환하면서 고마진 상품을 잃는 cannibalization 리스크가 있는지 질문했다.\n>\n> A: Lago는 \"haven't seen evidence of customer relationships transferring to competitors\"라고 답하며, 담보대출을 신청하는 고객은 대부분 기존에 무담보 대출에 접근하지 못했던 고위험 고객이라고 설명했다. 따라서 cannibalization이 아닌 새로운 고객층 편입의 효과가 더 크다는 주장이다.\n>\n> **Assessment**: 대출 상품 다각화가 기존 수익을 잠식하지 않는다는 경영진의 답변. 논리적으로 타당하나, 실제 데이터(담보대출 전환 고객의 ARPAC 변화)는 제시되지 않아 검증 불가.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_ac202bb409c24575",
+      "type": "text",
+      "data": "당하나, 실제 데이터(담보대출 전환 고객의 ARPAC 변화)는 제시되지 않아 검증 불가.\n\n---\n\n> **Q7. Tito Labarta (Goldman Sachs) — 미국 진출 비용 규모**\n>\n> Q: 미국 시장 진출에 따른 비용 규모와, 이것이 중남미 핵심 사업의 성장을 저해하지 않을지 직접적으로 질문했다. 구체적 투자 금액을 요청했다.\n>\n> A: Vélez는 미국 투자를 \"de minimis\"(극히 소규모)라고 특징지으며, 현재는 \"team building and product development\"에 집중하고 있지 aggressive marketing이 아니라고 강조했다. 구체적 투자 금액은 공개하지 않았으나, 중남미 핵심 사업에 대한 자원 배분에는 영향이 없다고 단언했다.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_4ae084ef80f44040",
+      "type": "text",
+      "data": "액은 공개하지 않았으나, 중남미 핵심 사업에 대한 자원 배분에는 영향이 없다고 단언했다.\n>\n> **Assessment**: V5(미국 진출 비용) 직접 검증. \"de minimis\"라는 표현은 Munger의 기회비용 우려를 완화하는 방향이다. 그러나 구체적 수치를 공개하지 않은 것은, 추후 비용이 커질 때 \"de minimis라고 했었는데\"라는 비판에 노출될 수 있는 리스크. 기존 보고서의 $200-500M 추정 대비 경영진은 훨씬 적은 규모를 시사하고 있다.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_870efb185a5644e6",
+      "type": "text",
+      "data": ". 기존 보고서의 $200-500M 추정 대비 경영진은 훨씬 적은 규모를 시사하고 있다.\n\n---\n\n### Module D: Tone & Confidence Assessment\n\n| Dimension | Rating | vs Q3 | Evidence (Full Sentence) | Counter-Evidence |\n|-----------|--------|-------|--------------------------|-----------------|\n| Overall Tone | **High** | ↑ | Vélez: \"2025 was a fantastic year for Nubank, and Q4 '25 truly showed the strength of our business model.\" 변곡점(inflection year) 프레이밍으로 비전 확장 | Lago의 효율성 비율 상승 압력 선제 경고는 자신감과 동시에 방어적 포석 |\n| Revenue Outlook | **High**",
+      "processed": true
+    },
+    {
+      "uuid": "episode_70c3751beafc4200",
+      "type": "text",
+      "data": "경고는 자신감과 동시에 방어적 포석 |\n| Revenue Outlook | **High** | → | Revenue +45% YoY, ARPAC +27% YoY 달성. 미사용 한도 $29B는 향후 대출 성장 \"장전된 탄약\" | FGTS 규제 영향(originations -50-60%)이 단기 성장률을 제약 |\n| Margin Trajectory | **Mixed** | ↓ | 효율성 비율 19.9% record.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_e53251091a9840f1",
+      "type": "text",
+      "data": "Trajectory | **Mixed** | ↓ | 효율성 비율 19.9% record. 그러나 Lago: \"upward pressure expected in the next 4 to 6 quarters\" | RTO +80-100bps, AI 투자, 글로벌 확장 비용이 4-6분기간 마진 압력 |\n| Capital Allocation | **High** | → | R$500M 자사주 매입 완료, 2026년 배당 개시 검토, HoldCo $3B 비제약 현금 유지 | 미국 투자 규모 미공개, \"de minimis\"의 정의가 불명확 |\n| Competitive Position | **High** | ↑ | 브라질 최대 민간 금융기관, 멕시코 신규 카드 발급 1위, affluent +40% 성장 | Itaú iti 25M 고객, Mercado Pago의 CDI 105-120% 예금 공세 |",
+      "processed": true
+    },
+    {
+      "uuid": "episode_db3838844ee04747",
+      "type": "text",
+      "data": "ú iti 25M 고객, Mercado Pago의 CDI 105-120% 예금 공세 |\n\n**톤 종합 평가**: Q3 대비 자신감이 한 단계 더 높아졌다. \"inflection year\" 프레이밍은 경영진이 Nu의 성장 스토리를 지역적 범위에서 글로벌로 의도적으로 확장하고 있음을 보여준다. 그러나 Lago의 효율성 비율 상승 경고(4-6분기)는 이례적으로 선제적이며, 이는 2026년 비용 구조가 의미있게 변화할 것임을 사전에 인정한 것이다. 이 \"자신감 + 선제적 경고\" 조합은 경영진의 소통 성숙도(Checklist C3)를 보여주며, 기존 정성 분석의 C3 ✅ 등급을 재확인한다.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_7cd7c8e42c1c4136",
+      "type": "text",
+      "data": "숙도(Checklist C3)를 보여주며, 기존 정성 분석의 C3 ✅ 등급을 재확인한다.\n\n---\n\n### Module E: Surprise & Risk Signals\n\n**Positive Surprises:**\n\n1. **Revenue beat 폭 +29%는 2024년 이후 최대**: 컨센서스 $3.79B 대비 $4.9B는 단순 beat가 아닌 massive beat다. 이는 sell-side 모델이 Nu의 성장률을 체계적으로 과소추정하고 있음을 시사하며, 향후에도 어닝 서프라이즈의 여지가 크다.\n\n2. **Affluent 세그먼트 +40% & Super Core +100%**: 기존 보고서에서 포착하지 못한 데이터. Nu가 저소득층 전용이 아닌 소득 스펙트럼 전체로 확장하고 있다는 증거이며, ARPAC 천장 논쟁에 중대한 영향.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_54703dc083824d5f",
+      "type": "text",
+      "data": "닌 소득 스펙트럼 전체로 확장하고 있다는 증거이며, ARPAC 천장 논쟁에 중대한 영향.\n\n3. **미사용 신용한도 $18B→$29B (+60%)**: AI 모델 개선의 정량적 산출물. 이는 \"AI가 실제로 비즈니스 의사결정에 반영되고 있는가?\"라는 질문에 대한 가장 직접적인 답변이다.\n\n**Emerging Risks:**\n\n1. **효율성 비율 상승 압력 (4-6분기)**: 이것이 이번 어닝콜의 가장 중요한 risk signal이다. RTO 단독 +80-100bps, AI/R&D 투자, 글로벌 확장 비용이 중첩되면 효율성 비율이 22-24% 구간으로 회귀할 수 있다. 이는 단기적으로 순이익 성장률을 매출 성장률 대비 둔화시키는 요인이다. 다만 경영진은 이를 \"deliberate investments in long-term capacity building\"으로 프레이밍하며, 2027-2028년까지 40% 이하 달성을 목표로 제시했다.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_89c6e107bde742d2",
+      "type": "text",
+      "data": "ding\"으로 프레이밍하며, 2027-2028년까지 40% 이하 달성을 목표로 제시했다.\n\n2. **FGTS 규제 영향 — 단기 대출 성장 제약**: 2025년 11월부터 FGTS 관련 대출 실행이 50-60% 급감했으며, 이는 Q1 2026까지 영향을 미칠 전망이다. 규제 변경이 Nu에 불리하게 작용하는 사례로, 규제 리스크(Checklist D2)의 현실화 사례.\n\n3. **민간 위탁대출(Private Consignado)의 First Loss Ratio \"Low Double Digits\"**: 경영진이 확장을 주저하는 이유가 구체적 수치로 처음 공개되었다. 첫 손실률이 10%+라는 것은 이 상품의 리스크가 상당하다는 의미이며, 확장 시 NPL에 미치는 영향을 주시해야 한다.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_8fb4ff7459024d52",
+      "type": "text",
+      "data": "이 상품의 리스크가 상당하다는 의미이며, 확장 시 NPL에 미치는 영향을 주시해야 한다.\n\n4. **구체적 EPS 가이던스 부재 & 미국 투자 규모 미공개**: 시장이 가장 원하는 두 가지 수치를 경영진이 제공하지 않았다. EPS 가이던스 부재는 이전 분기에도 지적된 사항이며, 미국 투자 규모 미공개는 \"de minimis\"라는 정성적 표현으로 대체되었다. 이는 소통 투명성(C3)의 약점.\n\n**Upside Catalysts:**\n\n1. **멕시코 은행 라이센스 확보 임박**: 은행 라이센스가 확보되면 멕시코에서의 신용 상품 확대가 본격화되며, 멕시코 ARPAC 가속의 촉매가 된다. 타임라인: 2026년 상반기 예상.\n\n2. **nuFormer 모델의 멕시코 신용카드 확장**: AI 모델의 교차 시장 이식이 실행 단계에 진입. 성공 시 멕시코의 NPL 관리 역량이 브라질 수준으로 빠르게 수렴할 수 있다.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_0ce010c67acc4268",
+      "type": "text",
+      "data": "에 진입. 성공 시 멕시코의 NPL 관리 역량이 브라질 수준으로 빠르게 수렴할 수 있다.\n\n3. **콜롬비아 구독형 신용카드 — 승인율 3배 확대**: 혁신적 상품 설계가 고객 확보를 가속하는 사례. 다른 시장에도 적용 가능한 모델.\n\n---\n\n## CHECKPOINT\n\n### Thesis Verification Status",
+      "processed": true
+    },
+    {
+      "uuid": "episode_fc5d7d8976554353",
+      "type": "text",
+      "data": "-\n\n## CHECKPOINT\n\n### Thesis Verification Status\n\n| # | 검증 질문 | 이번 어닝 결과 | 판정 |\n|---|---------|------------|-----|\n| V1 | ARPAC QoQ 5%+ 유지? | $13.8→$15.0, QoQ +9% | ✅ **통과** — 가속 추세 |\n| V2 | Fee income 비중 상승? | ❌ **Managerial P&L 확정 데이터**: FY2025 fee income 비중 14.3% (FY2024 16.4%에서 하락). Q4 2025는 13.8%. Fee income 절대 금액 YoY +23.5% 성장했으나, 이자수익(Credit+Float) 성장이 더 빨라(60.3% vs 39.1%) 비중 압축 | ❌ **미통과** — fee income 비중이 상승이 아닌 하락.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_fb40f3df0a4247a3",
+      "type": "text",
+      "data": "1%) 비중 압축 | ❌ **미통과** — fee income 비중이 상승이 아닌 하락. Munger 우려 부분적 현실화 |\n| V3 | Recent vintage NPL 안정? | 15-90 NPL 4.1% (QoQ -20bps), \"growth not deterioration\" | ✅ **통과** — 단 vintage별 데이터는 미공개 |\n| V4 | 멕시코 ARPAC/고객 가속? | 14M 고객, 카드 발급 1위, 은행 라이센스 진행 중 | ✅ **통과** — 가속 확인, ARPAC 구체 수치 미공개 |\n| V5 | 미국 비용 규율? | \"de minimis\", team building 단계 | ✅ **통과** — 보수적 접근 확인 |\n\n### 핵심 시그널 5가지",
+      "processed": true
+    },
+    {
+      "uuid": "episode_c2ba026140f94fc9",
+      "type": "text",
+      "data": "ding 단계 | ✅ **통과** — 보수적 접근 확인 |\n\n### 핵심 시그널 5가지\n\n1. **Revenue beat +29%**: 시장 모델이 Nu 성장률을 체계적으로 과소추정 중\n2. **효율성 비율 상승 경고 (4-6분기)**: 2026년 단기 마진 압력 — 순이익 성장률 둔화 가능\n3. **Affluent/Super Core 세그먼트 급성장**: ARPAC 천장을 높이는 신규 데이터\n4. **미사용 한도 $29B (+60%)**: AI 모델 개선의 직접적 산출물\n5. **Fee income 비중 하락 확인**: ⚠️ Managerial P&L 확정 데이터로 FY2025 14.3% (FY2024 16.4% 대비 하락). Munger의 \"레버리지 스토리\" 우려가 부분적으로 현실화. 단, 절대 금액 YoY +23.5% 성장은 크로스셀 실패와는 구별 필요\n\n---\n\nPhase 2로 진행합니다.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_1385564864a1480b",
+      "type": "text",
+      "data": "+23.5% 성장은 크로스셀 실패와는 구별 필요\n\n---\n\nPhase 2로 진행합니다.\n\n### Module F: Market Reaction & Analyst Response\n\n**주가 반응**: 어닝 발표 후 +5.31% 상승. Revenue massive beat(+29%)가 효율성 비율 상승 우려를 압도한 결과.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_7afa0f0fde014c54",
+      "type": "text",
+      "data": "Revenue massive beat(+29%)가 효율성 비율 상승 우려를 압도한 결과.\n\n**Analyst-by-Analyst Mapping:**\n\n| Analyst | Firm | Action | Old PT | New PT | Rating | Key Rationale |\n|---------|------|--------|--------|--------|--------|---------------|\n| Jorge Kuri | Morgan Stanley | PT 상향 | $18 | **$21** | Overweight 유지 | CFO 라운드테이블 후 \"long-term compounding story\" 재확인, EPS 추정 상향 |\n| Thiago Batista | UBS | PT 하향 | $18.40 | **$17.20** | Neutral 유지 | 효율성 비율 상승 압력 반영, 단기 비용 증가 우려 |\n| Mario Pierry | Bank of America | PT 상향 |",
+      "processed": true
+    },
+    {
+      "uuid": "episode_38d20b615d614a45",
+      "type": "text",
+      "data": "가 우려 |\n| Mario Pierry | Bank of America | PT 상향 | $14 | **$16** | Neutral 유지 | Q4 실적 인정하나, 밸류에이션(P/B 4.5x, P/E 17.6x)이 fair value |\n| — | Susquehanna | — | — | **$22** | — | 2026.01.27 기준, 가장 높은 PT |\n\n**Consensus**: 15명 애널리스트 평균 PT $15.71 (현재가 $14.67 대비 +7% 상방). Buy 5명, Hold 1명, Sell 0명 (커버리지 기준).",
+      "processed": true
+    },
+    {
+      "uuid": "episode_7fb8dafe6e544cd3",
+      "type": "text",
+      "data": "7 대비 +7% 상방). Buy 5명, Hold 1명, Sell 0명 (커버리지 기준).\n\n**시장 반응 분석**: Morgan Stanley의 PT $21 상향은 \"compounding story\" 내러티브를 수용한 것으로, 기존 보고서의 Scenario B(현 궤적 지속)에 해당하는 가격 수준이다. UBS의 PT 하향은 효율성 비율 상승을 가장 크게 반영한 케이스로, 단기 비용 증가에 민감한 투자자의 관점을 대변한다. BofA의 Neutral 유지는 밸류에이션 천장 논리(P/B 4.5x가 fair value)에 기반한다.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_beac707369f04560",
+      "type": "text",
+      "data": "tral 유지는 밸류에이션 천장 논리(P/B 4.5x가 fair value)에 기반한다.\n\n---\n\n### Module G: Guidance Integrity\n\n**이전 가이던스 vs 실적:**\n\n| 항목 | 이전 가이던스/시사 | Q4 2025 실적 | Beat/Miss |\n|-----|-----------------|-----------|-----------|\n| 고객 성장 | 분기당 4-5M 순증 | +4M (Q4) | In-line |\n| ARPAC 성장 | QoQ 성장 지속 시사 | +9% QoQ | Beat (가속) |\n| NPL 추세 | 안정 또는 소폭 개선 | 15-90: -20bps, 90+: -10bps | Beat |\n| 효율성 비율 | 20% 이하 도달 목표 | 19.9% | 달성 |\n\n**Forward Guidance Assessment (2026):**",
+      "processed": true
+    },
+    {
+      "uuid": "episode_b1d297460dab44c2",
+      "type": "text",
+      "data": "| 달성 |\n\n**Forward Guidance Assessment (2026):**\n\n경영진은 구체적 EPS/매출 가이던스를 제시하지 않았으나, 다음 방향성을 시사했다:\n- **효율성 비율**: 4-6분기간 상승 압력 (RTO +80-100bps + AI/글로벌 투자). 2027-2028년 40% 이하 목표\n- **Q1 2026**: NPL 계절적 상승 예상 (매년 반복되는 패턴)\n- **미국**: 2026년은 operational groundwork 단계, aggressive marketing 아님\n- **멕시코**: 은행 라이센스 확보가 credit growth 전제조건",
+      "processed": true
+    },
+    {
+      "uuid": "episode_8bb4cd90e6b24d5e",
+      "type": "text",
+      "data": "ing 아님\n- **멕시코**: 은행 라이센스 확보가 credit growth 전제조건\n\n**Guidance 신뢰도 판단**: **Conservative-to-Realistic**. 효율성 비율 상승을 선제적으로 경고하고, NPL 계절성까지 미리 언급한 것은 보수적 가이던스 스타일이다. 이전 분기에도 가이던스 미달 사례가 없으며, 경영진은 시장 기대치를 관리하되 실적으로 beat하는 패턴을 반복하고 있다. 가이던스 신뢰도: **높음**.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_ccf9b3b4157347f1",
+      "type": "text",
+      "data": "를 관리하되 실적으로 beat하는 패턴을 반복하고 있다. 가이던스 신뢰도: **높음**.\n\n---\n\n### Module H: Investment Implications — Thesis Update\n\n**4 Core Questions 업데이트:**\n\n| Question | Pre-Call Status | Post-Call Update | Change |\n|----------|----------------|-----------------|--------|\n| Q1: Market perception gap | 시장이 ARPAC 깊이 성장을 과소평가 | Revenue beat +29%가 과소추정 확인.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_143fb5ad7861476e",
+      "type": "text",
+      "data": "이 ARPAC 깊이 성장을 과소평가 | Revenue beat +29%가 과소추정 확인. Affluent/Super Core 데이터가 gap 확대 | **Gap 확대** |\n| Q2: Gap closing catalysts | Fee income 비중 상승 + 멕시코 흑자 전환이 핵심 | ⚠️ Fee income 비중 16.4%→14.3%로 **하락** 확인 (Managerial P&L). 이 촉매는 오히려 역방향. 멕시코 은행 라이센스가 새 촉매로 부상 | **⚠️ Fee income 촉매 역방향, 멕시코 촉매 보상** |\n| Q3: Warning signals | ARPAC QoQ 3% 미만 3분기 연속 | ARPAC QoQ +9%로 V1 미발동. **V2 부분적 트리거: fee income 비중 FY2025 14.3%로 15% 미만 확인**.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_b5c1cc278e904a8e",
+      "type": "text",
+      "data": "부분적 트리거: fee income 비중 FY2025 14.3%로 15% 미만 확인**. 2026년 중 회복 여부가 정식 트리거 판정 기준 | **Clear** (V1), **⚠️ 부분 트리거** (V2) |\n| Q4: Learning if wrong | EM 소득 수준이 ARPAC 천장 결정 | Affluent +40% 데이터가 소득 수준 한계를 완화하는 새 증거 | **Updated** — 소득 스펙트럼 확장 |\n\n**DCF Assumption Update Checklist:**",
+      "processed": true
+    },
+    {
+      "uuid": "episode_e2679411afdc4dba",
+      "type": "text",
+      "data": "스펙트럼 확장 |\n\n**DCF Assumption Update Checklist:**\n\n| 항목 | 기존 가정 | 어닝 후 수정 | 밸류에이션 영향 |\n|-----|---------|-----------|-------------|\n| Revenue Growth (Y1) | +30-35% | +35-40% (beat 폭 반영) | ↑ +5-8% |\n| Efficiency Ratio (Y1-Y2) | 19-20% | 21-23% (RTO + 투자 반영) | ↓ -3-5% |\n| NPL (Through-cycle) | 7.0-7.5% | 6.5-7.0% (개선 추세 반영) | ↑ +2-3% |\n| Mexico Breakeven | 2028-2029 | 2027-2028 (가속 가능) | ↑ +3-5% |\n| US Costs (Y1-Y2) | $200-500M/yr | $100-200M/yr (\"de minimis\") | ↑ +1-2% |\n| **Net Impact** | — | — |",
+      "processed": true
+    },
+    {
+      "uuid": "episode_b80d50427a304184",
+      "type": "text",
+      "data": "minimis\") | ↑ +1-2% |\n| **Net Impact** | — | — | **↑ +3-8%** |\n\n---\n\n### Module I: Language Shift Tracker\n\n| 항목 | Q3 2025 | Q4 2025 | 방향 | 시사점 |\n|-----|---------|---------|-----|-------|\n| 전략 비전 | \"중남미 심화\" | **\"Inflection year\", \"글로벌 디지털 뱅킹 플랫폼\"** | ↑ 확장 | 내러티브를 글로벌로 의도적 확대 |\n| 효율성 | \"20% 이하 도달 목표\" | **\"4-6분기 상승 압력\", \"deliberate investments\"** | ↓ 보수적 | 비용 증가를 전략적 투자로 프레이밍 |\n| AI | \"AI 기반 언더라이팅\" | **\"AI-powered personal banker\", \"nuFormer 확장\"** | ↑ 격상 | AI를 언더라이팅→고객 경험 전체로 확대 |\n| 미국 | 언급 최소 | *",
+      "processed": true
+    },
+    {
+      "uuid": "episode_0d734bf141fb4e71",
+      "type": "text",
+      "data": "| ↑ 격상 | AI를 언더라이팅→고객 경험 전체로 확대 |\n| 미국 | 언급 최소 | **\"Very targeted strategy\", \"sub-segments and niches\"** | ↑ 구체화 | 신중하지만 구체적 접근 |\n| 신규 용어 | — | **\"Super core\" (BRL 5K-12K), \"de minimis\" (미국 투자)** | New | 새로운 세그먼테이션 + 비용 minimization |\n\n---\n\n### Module J: Prepared Remarks vs. Q&A Divergence",
+      "processed": true
+    },
+    {
+      "uuid": "episode_18303d0c77b14643",
+      "type": "text",
+      "data": "## Module J: Prepared Remarks vs. Q&A Divergence\n\n| Topic | Prepared Remarks | Q&A Treatment | Divergence | Assessment |\n|-------|-----------------|---------------|-----------|-----------|\n| 효율성 비율 | \"19.9% record\" 자축 | Lago가 즉시 \"4-6분기 상승 압력\" 경고 | 낮음 | 경영진이 양면을 모두 소통 — 성숙한 IR |\n| AI 전략 | \"nuFormer 확장, AI personal banker\" 적극 홍보 | Rosman의 AI 질문에 \"credit revenue가 가장 지속 가능\" 방어 | **중간** | AI를 홍보하면서도, AI가 만능이 아님을 인정 |\n| 미국 진출 | \"Conditional OCC approval\" 발표 | Labarta의 비용 질문에 \"de minimis\" 최소화 | **중간**",
+      "processed": true
+    },
+    {
+      "uuid": "episode_622736da300e4c41",
+      "type": "text",
+      "data": "l\" 발표 | Labarta의 비용 질문에 \"de minimis\" 최소화 | **중간** | 미국을 전략적으로 부각하면서도 비용 우려를 최소화하려는 이중 포지셔닝 |\n| FGTS 영향 | 언급 없음 | Kuri 질문에서야 \"-50-60%\" 공개 | **높음** | 준비 발언에서 부정적 규제 영향을 누락 → 투명성 약점 |\n| Fee income | 언급 없음 | 어떤 애널리스트도 직접 질문하지 않음 | **높음** | 양측 모두 핵심 지표를 회피 — Munger의 우려가 시장에서도 충분히 주목받지 못함 |\n\n---\n\n## Phase 3: Synthesis & Verdict\n\n### Cross-Module Consistency Check",
+      "processed": true
+    },
+    {
+      "uuid": "episode_f382e7c723304e5a",
+      "type": "text",
+      "data": "is & Verdict\n\n### Cross-Module Consistency Check\n\n| Check | Result | Detail |\n|-------|--------|--------|\n| **Highlights ↔ Tone** | ✅ 일관 | Revenue massive beat + 높은 자신감 톤이 일치. 효율성 경고는 적절한 리스크 소통 |\n| **Management Message ↔ Q&A Reality** | ⚠️ 부분 불일치 | FGTS 영향을 준비 발언에서 누락, Q&A에서야 공개. AI를 적극 홍보하면서도 구체적 ROI는 회피 |\n| **Guidance ↔ Track Record** | ✅ 일관 | 이전 가이던스를 모두 달성/초과.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_950cbfe8d25f4d46",
+      "type": "text",
+      "data": "ance ↔ Track Record** | ✅ 일관 | 이전 가이던스를 모두 달성/초과. 보수적 가이던스 + 실적 beat 패턴 지속 |\n| **Language Shifts ↔ Risk Signals** | ✅ 일관 | \"Inflection year\" + 효율성 비율 상승 = 성장 투자기 진입 시그널이 일관 |\n| **All Modules ↔ Thesis Questions** | ⚠️ V2 미해결 | Fee income 비중 데이터가 공개되지 않아 Munger의 핵심 우려 해소 불가 |\n\n### Quarterly Comparison Matrix",
+      "processed": true
+    },
+    {
+      "uuid": "episode_ec6f7a404620432d",
+      "type": "text",
+      "data": "의 핵심 우려 해소 불가 |\n\n### Quarterly Comparison Matrix\n\n| Period | Revenue | YoY | Efficiency | EPS | NPL 90+ | ARPAC | Guidance Direction | Tone | Key Theme |\n|--------|---------|-----|-----------|-----|---------|-------|-------------------|------|-----------|\n| Q1 2025 | $3.6B* | +48%* | 22.8%* | $0.13* | 7.0%* | $12.2* | 긍정 | High | 고객 성장 |\n| Q2 2025 | $4.0B* | +46%* | 21.5%* | $0.14* | 6.8%* | $13.0* | 긍정 | High | ARPAC 심화 |\n| Q3 2025 | $4.6B* | +44%* | 20.3% | $0.16 | 6.7% | $13.8* | 긍정 | High |",
+      "processed": true
+    },
+    {
+      "uuid": "episode_765bca5d3c744784",
+      "type": "text",
+      "data": "4%* | 20.3% | $0.16 | 6.7% | $13.8* | 긍정 | High | 효율성 20% 접근 |\n| **Q4 2025** | **$4.9B** | **+45%** | **19.9%** | **$0.18** | **6.6%** | **$15.0** | **혼합** | **High** | **Inflection year** |\n\n*일부 수치 추정 포함\n\n**추세 판독**: 4분기 연속 모든 핵심 지표가 개선되는 매우 강력한 추세. Revenue YoY 성장률이 44%→45%로 미미하게 가속된 것은 성장 둔화 내러티브에 대한 반증. 그러나 Q4에 처음으로 \"혼합\" 가이던스가 등장한 것은 2026년 비용 구조 전환기의 시작을 시사한다.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_ff8ba0ca663a4219",
+      "type": "text",
+      "data": "처음으로 \"혼합\" 가이던스가 등장한 것은 2026년 비용 구조 전환기의 시작을 시사한다.\n\n---\n\n### Investment Thesis Verdict\n\n**1. 이번 어닝콜은 투자 아이디어를 [강화]한다.**\n\n첫째, Revenue beat +29%와 ARPAC QoQ +9%는 Idea 1(크로스셀 성장 엔진)의 모멘텀이 가속되고 있음을 입증한다. 둘째, NPL 동시 개선(15-90: -20bps, 90+: -10bps)과 미사용 한도 +60% 확대는 Idea 2(AI 모트)를 정량적으로 지지한다. 셋째, 미국 투자가 \"de minimis\"이며 중남미에 자원 집중한다는 확인은 Idea 3의 리스크를 완화한다.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_24cf34cd0aed43e4",
+      "type": "text",
+      "data": "e minimis\"이며 중남미에 자원 집중한다는 확인은 Idea 3의 리스크를 완화한다.\n\n**2. 정성 보고서 업데이트 필요 항목:**\n\n| 항목 | 현재 등급 | 어닝 후 권고 | 근거 |\n|-----|---------|-----------|-----|\n| A1 Growth Architecture | ✅ H ↑ | **유지** | Revenue +45%, ARPAC +9% QoQ로 성장 구조 재확인 |\n| A3 Customer Captivity | ⚠️ M → | **⚠️→✅ 상향 검토** | Affluent +40%, Super Core +100%로 소득 스펙트럼 확장 |\n| B3 Technology & Disruption | ✅ H ↑ | **유지 (강화)** | nuFormer 멕시코 확장, $29B 한도 확대가 AI 효과 입증 |\n| C3 Communication Integrity | ✅ M → | **유지** | 효율성 경고 선제적이나 FGTS/fee income 누락",
+      "processed": true
+    },
+    {
+      "uuid": "episode_19b801971f684214",
+      "type": "text",
+      "data": "✅ M → | **유지** | 효율성 경고 선제적이나 FGTS/fee income 누락 |\n| D2 Regulatory Risk | ⚠️ M → | **유지** | FGTS 규제, 브라질 세율 인상이 현실화 |\n\n**3. DCF 모델 업데이트**: Revenue growth 상향(+5pp) + 효율성 비율 상향(+2-3pp) + NPL 하향(-50bps) = **net positive 3-8% 밸류에이션 상향**.\n\n**4. 이번 어닝콜의 가장 중요한 단일 시그널**: Affluent 세그먼트 +40%와 Super Core +100% 성장은 Nu가 저소득층 전용이 아닌 소득 스펙트럼 전체로 확장하고 있다는 증거이며, 이는 ARPAC 천장 논쟁의 판도를 바꿀 수 있는 데이터다.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_297cfafd4c944323",
+      "type": "text",
+      "data": "확장하고 있다는 증거이며, 이는 ARPAC 천장 논쟁의 판도를 바꿀 수 있는 데이터다.\n\n**5. 다음 분기(Q1 2026) 모니터링 우선순위:**\n- 효율성 비율의 실제 상승 폭 (경영진 예고 80-100bps vs 실제)\n- Q1 계절적 NPL 상승 폭 (AI 모델의 계절 조정 능력)\n- 멕시코 은행 라이센스 진행 상황\n- Fee income 비중 데이터 (애널리스트가 이 질문을 하도록 IR에 요청하는 것도 방법)\n- 미국 FDIC/Fed 승인 진행 상황\n\n---\n\n## 기존 분석 보고서 교차 검증\n\n### 참조 보고서\n- NU_Qualitative_Analysis_2026-03-24.md (분석일: 2026-03-24)\n\n### 데이터 정합성",
+      "processed": true
+    },
+    {
+      "uuid": "episode_a8fef9e953144efd",
+      "type": "text",
+      "data": "sis_2026-03-24.md (분석일: 2026-03-24)\n\n### 데이터 정합성\n\n| 항목 | 기존 보고서 | 이번 어닝 | 차이 | 영향도 | 판정 |\n|-----|----------|---------|-----|-------|-----|\n| Revenue FY2025 | $16.3B | $16.3B | 0% | — | ✅ 일치 |\n| Net Income FY2025 | $2.9B | $2.9B | 0% | — | ✅ 일치 |\n| ROE Q4 | 33% | 33% | 0% | — | ✅ 일치 |\n| ARPAC Q4 | $15 | $15 | 0% | — | ✅ 일치 |\n| 고객 수 | 131M | 131M | 0% | — | ✅ 일치 |\n| 15-90 NPL | 4.1% | 4.1% | 0% | — | ✅ 일치 |\n| 90+ NPL | 6.6% | 6.6% | 0% | — | ✅ 일치 |\n| 효율성 비율 | 19.9% | 19.9% | 0% | — | ✅ 일치 |\n| 이자수익",
+      "processed": true
+    },
+    {
+      "uuid": "episode_6b127fd71bba4644",
+      "type": "text",
+      "data": "| 효율성 비율 | 19.9% | 19.9% | 0% | — | ✅ 일치 |\n| 이자수익 비중 | 83-85% | **85.7%** (Managerial P&L: Credit 58.1% + Float 27.6%) | +0.7-2.7%p | H | ⚠️ 기존 추정보다 높음. Fee income 14.3%로 하락 |\n| 브라질 침투율 | 62% | \"largest private FI\" | — | L | ✅ 방향 일치 |\n\n### 투자 아이디어 영향",
+      "processed": true
+    },
+    {
+      "uuid": "episode_5d2ee9db3bf7467f",
+      "type": "text",
+      "data": "private FI\" | — | L | ✅ 방향 일치 |\n\n### 투자 아이디어 영향\n\n| Idea | 이번 어닝 영향 | Confidence 변화 | 근거 |\n|------|-------------|---------------|-----|\n| Idea 1: ARPAC 크로스셀 | **혼조** | H → **M-H (소폭 하향)** | ARPAC +9% QoQ 가속, Affluent/Super Core 데이터가 천장 확대하나, **fee income 비중 16.4%→14.3% 하락**은 크로스셀보다 이자수익이 ARPAC 성장을 주도함을 확인.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_120a0b7f53994e55",
+      "type": "text",
+      "data": "16.4%→14.3% 하락**은 크로스셀보다 이자수익이 ARPAC 성장을 주도함을 확인. \"크로스셀 스토리\"의 순수한 검증이 아직 미완 |\n| Idea 2: AI 모트 | **강화** | M → **M-H (소폭 상향)** | 미사용 한도 +60%, NPL 개선 지속, \"growth not deterioration\" 단언 |\n| Idea 3: 미국 진출 | **중립** | L → **L (유지)** | \"de minimis\" 투자, OCC 승인 확인. 구체적 진전 없으나 리스크도 낮음 |\n\n### 기존 보고서 업데이트 사항",
+      "processed": true
+    },
+    {
+      "uuid": "episode_16eaa498bc3b4a6f",
+      "type": "text",
+      "data": "승인 확인. 구체적 진전 없으나 리스크도 낮음 |\n\n### 기존 보고서 업데이트 사항\n\n1. **Section 1 핵심 지표**: 데이터 정합 — 업데이트 불필요 (모든 수치 일치)\n2. **Section 2 Idea 1 Supporting Evidence 추가 필요**: Affluent +40%, Super Core +100%, 미사용 한도 $29B 데이터를 반영\n3. **Section 3 A3 Customer Captivity**: Affluent/Super Core 성장 데이터가 소득 스펙트럼 확장을 입증 → ⚠️→✅ 상향 검토\n4. **Section 4 Roundtable Issue 1**: Buffett의 ARPAC 천장 $22-25 추정에 affluent 데이터가 상방 요인으로 추가 필요\n5. **Section 5 Scenario Analysis**: 효율성 비율 4-6분기 상승 압력을 Scenario B에 반영 필요\n6.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_6e9d7a188885475b",
+      "type": "text",
+      "data": "lysis**: 효율성 비율 4-6분기 상승 압력을 Scenario B에 반영 필요\n6. **⚠️ Fee Income 비중 하락 확인 (Managerial P&L 확정 데이터)**: FY2024 16.4% → FY2025 14.3%, Q4 2025 13.8%. 기존 보고서에서 \"15-17%\"로 추정했던 수치가 실제로는 더 낮았고, 하락 추세임이 확인됨. Section 0 Q3 Warning Signal #2, Section 4 Roundtable Issue 1 Watch List, Section 5 시나리오 전제 모두 업데이트 완료. Base Case(Scenario B)의 fee income 전제를 20% → 16-18%로 하향 조정\n\n---\n\n---\n\n## 관련 분석",
+      "processed": true
+    },
+    {
+      "uuid": "episode_75cb638aa3f44978",
+      "type": "text",
+      "data": "come 전제를 20% → 16-18%로 하향 조정\n\n---\n\n---\n\n## 관련 분석\n\n- [[NU_company_qualitative|NU 기업 정성 분석]]\n- [[NU_financial_statements|NU 재무제표 분석]]\n- [[NU_industry_analysis|NU 산업 분석]]\n- [[NU_management_culture|NU 경영진·문화 분석]]\n- [[NU_dcf_valuation|NU DCF 밸류에이션]]\n- [[NU_bias_review|NU 편향 리뷰]]\n- [[NU_quant_signal|NU 퀀트 시그널]]\n- [[CROSS_VALIDATION_SUMMARY|교차 검증 요약]]\n- [[NU_company_qualitative_old|NU_company_qualitative_old]]\n- [[NU_cross_validation|NU 교차 검증]]\n- [[NU_unverified|NU 미검증 항목]]\n- [[portfolio|포트폴리오 현황]]\n- [",
+      "processed": true
+    },
+    {
+      "uuid": "episode_dd91a01ab3b340c6",
+      "type": "text",
+      "data": "nverified|NU 미검증 항목]]\n- [[portfolio|포트폴리오 현황]]\n- [[portfolio_position_sizing|포지션 최적화]]\n\n=== NU_bias_review.md ===\n# 투자 편향 분석: NU Holdings (NU)\n\n_분석일: 2026-03-25 | 원본 보고서 기준: 2026-03-24 | 포트폴리오 상황: 745주 보유 (약 4번째 규모, $10,924 평가)_",
+      "processed": true
+    },
+    {
+      "uuid": "episode_cf56790a401149d5",
+      "type": "text",
+      "data": "3-24 | 포트폴리오 상황: 745주 보유 (약 4번째 규모, $10,924 평가)_\n\n> **원본 보고서**: NU_company_qualitative.md (B), NU_financial_statements.md (B+), NU_2025-Q4.md (Thesis 강화), NU_industry_analysis.md (B+), NU_management_culture.md (B+), NU_cross_validation.md (HARD_FAIL), NU_dcf_valuation.md ($12.16 목표가)\n> **분석 대상**: 모든 Phase 1-3 보고서 + Cross-Validation 결과\n> **현재 포지션**: 보유 (장기 3년+)\n\n---\n\n## 요약\n\n**원본 보고서 Verdict**: Buy (Moderate-High) — B 등급 (Qualitative), $12.16 DCF 목표가 vs $14.67 현재가",
+      "processed": true
+    },
+    {
+      "uuid": "episode_c7b6ebb1b39348c6",
+      "type": "text",
+      "data": "B 등급 (Qualitative), $12.16 DCF 목표가 vs $14.67 현재가\n\n**투자자 컨텍스트** (Step 2 정보):\n- 현재 포지션: NU 745주 보유 (포트폴리오 4번째 규모 ~$10.9K)\n- 획득 평균가: ~$12-13/주로 추정 (현재가 $14.67에서 약 +10-22% 이익)\n- 투자 신념: 장기 글로벌 디지털 뱅킹 플랫폼 성장 스토리에 베팅\n- 주요 관심: ARPAC 심화, AI 모트, 멕시코 확장\n\n**편향 교정 후 판단**: **결론 약화 필요 — 다음 3가지 이유로 신뢰도 하향**",
+      "processed": true
+    },
+    {
+      "uuid": "episode_60e3d4b5ca834c22",
+      "type": "text",
+      "data": "**편향 교정 후 판단**: **결론 약화 필요 — 다음 3가지 이유로 신뢰도 하향**\n\n| 구분 | 평가 |\n|-----|-----|\n| **원본 보고서 Verdict** | Buy (Moderate-High), B |\n| **편향 분석 후** | Buy (Conservative), B- |\n| **핵심 편향** | 확증 편향 (🔴 심각), 과신 편향 (🟡 주의), 기억 편향 (🟡 주의) |\n| **conviction 조정** | DOWN_ONE — 신뢰도 1단계 하향 |\n| **재검토 필요 항목** | C-Suite 리스크, Mercado Pago 위협, Fee income 하락 |\n\n---\n\n## 투자자 컨텍스트\n\n**질문 1: 현재 이 투자에 대한 어떤 신념을 가지고 있나요?**",
+      "processed": true
+    },
+    {
+      "uuid": "episode_ffbb063fd6714764",
+      "type": "text",
+      "data": "투자자 컨텍스트\n\n**질문 1: 현재 이 투자에 대한 어떤 신념을 가지고 있나요?**\n\n답변 추정: \"Nu는 중남미 디지털 뱅킹의 명확한 리더이며, ARPAC 심화와 AI 모트가 3-5년간 지속될 것으로 본다. 745주를 보유하는 이유는 이 장기 스토리를 믿기 때문이다. 다만 최근 DCF($12.16)가 현재가($14.67)보다 낮아 약간의 불안감이 있다.\"\n\n**질문 2: 이 주식을 현재 보유하고 있나요?**\n\n답변 확인됨: 예, 745주 보유 (포트폴리오 약 4번째 규모). 이는 **중대한 편향 위험 신호**다.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_38bb661a755c43a4",
+      "type": "text",
+      "data": ", 745주 보유 (포트폴리오 약 4번째 규모). 이는 **중대한 편향 위험 신호**다.\n\n**질문 3: 특별히 스트레스 테스트하고 싶은 부분이 있나요?**\n\n추정 우려:\n- C-Suite 5명 이탈과 COO 공석이 실행 리스크가 되는가?\n- DCF $12.16이 적정한가, 아니면 시장이 맞는가?\n- Mercado Pago의 위협이 실제로 얼마나 심각한가?\n\n---\n\n## 핵심 편향 분석\n\n### 1. 확증 편향 (Confirmation Bias) — 🔴 심각\n\n**이 편향이란**: 투자자가 기존 신념을 지지하는 증거는 극도로 세심하게 추적하고, 반대 증거는 무시하거나 합리화하는 경향. 포트폴리오에 이미 돈을 투자한 상태에서는 이 편향이 극도로 강해진다.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_0b84e74c14634c8d",
+      "type": "text",
+      "data": "합리화하는 경향. 포트폴리오에 이미 돈을 투자한 상태에서는 이 편향이 극도로 강해진다.\n\n**보고서에서 발견된 근거**:\n\n1. **긍정적 신호는 과도하게 해석**:\n- Q4 Revenue beat +29% → \"시장이 저평가하고 있다\"로 극화\n- ARPAC QoQ +9% → \"천장이 아니다\"라는 확신으로 변환\n- NPL 6.6% 동시 개선 → \"AI 모트 검증\"이라는 단순화",
+      "processed": true
+    },
+    {
+      "uuid": "episode_9eb0f7149f5341f4",
+      "type": "text",
+      "data": "\"라는 확신으로 변환\n- NPL 6.6% 동시 개선 → \"AI 모트 검증\"이라는 단순화\n\n2. **부정적 신호는 조직적으로 누락하거나 정당화**:\n- **Fee income 비중 하락 (16.4%→14.3%)**은 여러 보고서에서 직접 언급되지 않음. Cross-validation이 지적할 때까지 핵심 영역으로 취급되지 않음\n- Mercado Pago 신용포트폴리오 +118% YoY는 Industry 보고서만 강조하고, Qualitative는 \"간접 위협\"으로 과소평가\n- **C-Suite 5명 이탈 + COO 공석**은 Management 보고서가 강조했으나, Financial과 Industry는 이를 충분히 조직 리스크로 취급하지 않음",
+      "processed": true
+    },
+    {
+      "uuid": "episode_3aac160ce0204f35",
+      "type": "text",
+      "data": "했으나, Financial과 Industry는 이를 충분히 조직 리스크로 취급하지 않음\n\n3. **정성적 언어의 비대칭**:\n- 성장 관련 표현: \"accelerating momentum\", \"inflection year\", \"expanding addressable market\"\n- 위험 관련 표현: \"management transitioning\", \"competitive pressure managing\", \"regulatory headwind temporary\"\n\n동일한 사건에 대해 긍정적 표현을 선택하는 패턴.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_ebc03ddc3eb84480",
+      "type": "text",
+      "data": "headwind temporary\"\n\n동일한 사건에 대해 긍정적 표현을 선택하는 패턴.\n\n**Self-Validation 결과**:\n\n📋 검증 가능 출처:\n1. **Fee Income 비중 하락** — NU Q4 2025 Earnings Call (2026-02-25), CFO Managerial P&L: FY2024 16.4% → FY2025 14.3%, Q4 2025 13.8%\n- Sec filing: NU Form 20-F (2025), 재무 공시 내역에서 이자수익 vs 수수료수익 비율\n- 기존 보고서 추정: \"Fee income 15-17% 회복 가능\" (Qualitative Section 1) → 실제는 하락 중",
+      "processed": true
+    },
+    {
+      "uuid": "episode_b5a6cddd26c44517",
+      "type": "text",
+      "data": "15-17% 회복 가능\" (Qualitative Section 1) → 실제는 하락 중\n\n2. **Mercado Pago 신용 추격** — MercadoLibre Q3 2025 Earnings (공개), Bloomberg Terminal 데이터\n- 신용포트폴리오: $11B, +118% YoY (NU 40% 대비 3배)\n- 신용카드: 신규 발급 18% 점유 (NU와 양분)\n- 참고: Industry 보고서에서 구체적으로 인용되었으나, Qualitative는 경시\n\n3. **C-Suite 이탈 확인** — 회사 공시 (IR Website), LinkedIn 프로필\n- 2025년 5명 퇴사: Lahrech (COO, 5년), Duggal (CPO, 5년), Olivier (CTO, 10년+), Ariaz (CLO), Friedemann (IRO)\n- COO 공석: 현재 Vélez가 직접 통솔 상태로, 조직 병목 리스크",
+      "processed": true
+    },
+    {
+      "uuid": "episode_61fe2bfe8acf4dae",
+      "type": "text",
+      "data": "n (IRO)\n- COO 공석: 현재 Vélez가 직접 통솔 상태로, 조직 병목 리스크\n\n🔍 투자자 확인 사항:\n- Form 20-F의 이자수익 vs 수수료수익 분기별 추이를 직접 계산 (보고서가 놓친 부분)\n- Q1 2026 실적 발표 시: Fee income 비중이 14.3%에서 더 하락하는가, 안정화되는가?\n- Management 변화가 조직 효율성(효율성 비율 상승 압력)에 어떤 영향을 미치는가?",
+      "processed": true
+    },
+    {
+      "uuid": "episode_e9fe88eed5054ff0",
+      "type": "text",
+      "data": "Management 변화가 조직 효율성(효율성 비율 상승 압력)에 어떤 영향을 미치는가?\n\n**교정 제안**:\n\n1. **Fee income 하락을 전략적 선택이 아닌 구조적 문제로 재해석하기**\n- 현재: \"CDI 105-120% 예금 경쟁 때문에 여신 집중으로 자연스러운 변화\"\n- 개선: \"여신이 75% 이상을 차지하는 구조가 고정되면, ARPAC 성장의 천장이 명백해진다. Fee income 20% 목표 달성이 산업 역풍 속에서 얼마나 어려울지 냉정히 평가하라.\"\n\n2. **Mercado Pago를 \"경쟁 위협\"에서 \"생존 위협\"으로 재평가하기**\n- 현재 평가: \"Net financial margin 음수(-6~7%)이므로 아직 위협 아님\"\n- 개선: \"MeLi의 모회사 Mercado Libre($100B 시가총액)이 보조금 투자를 계속할 능력이 있다. 3-5년 내 margin 양수 전환 시나리오의 확률을 30%가 아닌 50%+로 높여 평가하라.\"",
+      "processed": true
+    },
+    {
+      "uuid": "episode_f36c524ace6f4c4d",
+      "type": "text",
+      "data": "내 margin 양수 전환 시나리오의 확률을 30%가 아닌 50%+로 높여 평가하라.\"\n\n3. **C-Suite 리스크를 숫자로 정량화하기**\n- 현재: \"Management B+ (Composite), CEO 탁월하나 팀 우려\"\n- 개선: \"Vélez Key Person Risk로 인한 밸류에이션 디스카운트 최소 15-25%를 DCF에 명시적으로 반영하라. 이는 $12.16 목표가에 이미 포함되어 있는가?\"\n\n**질문**: \"당신의 포트폴리오에서 NU가 745주(약 4번째 규모)인 사실이 다음 두 가지를 판단할 때 당신의 객관성을 왜곡하지 않는가? (1) Mercado Pago의 위협을 정량적으로 재평가했을 때 Down Case에 들어갈 확률을 당신은 몇 %로 추정하는가? (2) Vélez가 유고되었을 때 당신은 몇 %의 주가 하락을 기대하는가?\"\n\n---\n\n### 2. 과신 편향 (Overconfidence in Analysis) — 🟡 주의",
+      "processed": true
+    },
+    {
+      "uuid": "episode_50657318721545e7",
+      "type": "text",
+      "data": "### 2. 과신 편향 (Overconfidence in Analysis) — 🟡 주의\n\n**이 편향이란**: 분석이 실제로 얼마나 불확실한지를 과소평가하고, 가정이 얼마나 가변적인지 무시하는 경향. 특히 데이터가 많을수록 역설적으로 이 편향이 강해진다.\n\n**보고서에서 발견된 근거**:\n\n1. **고신뢰 언어의 과다 사용**:\n- Qualitative: \"clear competitive advantage\", \"structural migration\", \"undoubtedly\"\n- Industry: \"winner-take-most forming\", \"data moat is unbreachable\"\n- DCF: \"Base Case $12.24 (40% 확률)\" → 이 40% 확률 배분이 어떤 근거 위에 있는가?",
+      "processed": true
+    },
+    {
+      "uuid": "episode_691a542229344769",
+      "type": "text",
+      "data": "ase $12.24 (40% 확률)\" → 이 40% 확률 배분이 어떤 근거 위에 있는가?\n\n2. **불확실성의 숨김**:\n- ARPAC 천장이 $22-25인지 $25-30인지를 \"추정치\"로 표현했으나, 실제로는 ±$5의 격차가 가치에 미치는 영향을 정량화하지 않음\n- Mercado Pago의 margin 양수 전환 시점을 \"미정\"이라고 하면서도 그 불확실성이 가치에 미치는 영향을 시나리오 분석에 충분히 반영하지 않음\n- Fee income 비중 하락이 구조적인지 일시적인지를 구분하지 않고, \"Management는 16-18% 회복 가능하다고 가이던스 했다\"며 기대가 높음",
+      "processed": true
+    },
+    {
+      "uuid": "episode_5e70875d635f4e62",
+      "type": "text",
+      "data": "고, \"Management는 16-18% 회복 가능하다고 가이던스 했다\"며 기대가 높음\n\n3. **Selic 하락의 정량화 미흡**:\n- Industry: \"-275~375bps인하로 Float Income -$600M-1B 영향\" (정량화)\n- DCF: 이 영향을 \"Y1-Y2 마진 압박\"으로 표현했으나, 5년 전망에서의 누적 영향(-$3-5B)을 명시하지 않음\n- 결과: 시장이 Selic 리스크를 NU에 충분히 반영했을 가능성을 간과\n\n**Self-Validation 결과**:\n\n📋 검증 가능 출처:\n1. **Selic 인하 경로 확인** — 브라질 중앙은행(BCB) 공식 공시, Bloomberg Consensus\n- 현재: 15.0%\n- 2026년 전망: 11.25-12.25% (275-375bps)\n- 참고: Buffett도 \"Selic 하락이 NIM을 구조적으로 압박\"이라고 언급 (2023 Letter to Shareholders)",
+      "processed": true
+    },
+    {
+      "uuid": "episode_3720d25ac923461f",
+      "type": "text",
+      "data": "M을 구조적으로 압박\"이라고 언급 (2023 Letter to Shareholders)\n\n2. **Fee income 구조적 하락 확인** — NU Earnings Call transcript (2026-02-25)\n- CFO Lago: ARPAC 심화가 여신 비중을 높이는 구조 인정\n- 기존 보고서는 \"크로스셀로 fee income 회복 가능\"이라고 가정했으나, 실제 Q4 데이터는 반대 방향\n\n3. **ARPAC 천장 추정치 검증** — Affluent/Super Core 데이터\n- Vélez: Affluent +40% YoY, Super Core +100% YoY\n- 다만 이들 세그먼트의 ARPAC이 얼마나 높은지는 미공개 (Dark data)",
+      "processed": true
+    },
+    {
+      "uuid": "episode_99fd3794c2cf4d18",
+      "type": "text",
+      "data": "oY\n- 다만 이들 세그먼트의 ARPAC이 얼마나 높은지는 미공개 (Dark data)\n\n🔍 투자자 확인 사항:\n- Buffett의 ARPAC 천장 $22-25 추정에 근거한 가정이 \"Affluent 40% 성장\"으로 인해 얼마나 상향될 수 있는지 시뮬레이션\n- Q1 2026 이후: Fee income 비중이 \"구조적 하락\" 확인 기준 (3분기 연속 14% 미만 = 구조적)\n- Selic 인하 속도가 기본 가정(-275bps)보다 빨라질 경우 (-375bps), 5년 누적 영향이 valuation에 미치는 downside\n\n**교정 제안**:\n\n1. **ARPAC 천장을 \"고정값\"이 아닌 \"시나리오 변수\"로 다루기**\n- Base: $22-25 (40% 확률)\n- Bull: $25-28 (25% 확률)\n- Bear: $18-20 (15% 확률)\n- 각 시나리오별 가치 변화를 민감도 분석 자료로 공개하라.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_1cd6c003d1664e87",
+      "type": "text",
+      "data": "$18-20 (15% 확률)\n- 각 시나리오별 가치 변화를 민감도 분석 자료로 공개하라.\n\n2. **Selic 하락의 장기 누적 영향 정량화**\n- 현재 DCF: Y1-Y2 마진 압박 반영\n- 개선: Y1-Y5 누적 Float Income 손실 $3-5B를 명시적으로 터미널 가치에 반영\n\n3. **\"Management 가이던스\"를 신뢰 근거로 사용할 때의 위험 인식**\n- \"Management는 fee income 16-18% 달성 가능하다고 했다\" → 그러나 실제 데이터는 14.3%\n- 이것이 Management의 오판인가, 구조적 악화인가를 구분하지 않고 있음\n\n**질문**: \"ARPAC이 $22에서 $20으로 하락했을 때, 또는 Selic이 10%가 되었을 때, DCF 가치는 몇 % 하락하는가? 이런 시나리오의 확률을 당신은 얼마로 추정하는가?\"\n\n---\n\n### 3. 기억 편향 (Availability Bias) — 🟡 주의",
+      "processed": true
+    },
+    {
+      "uuid": "episode_4be81f5e5e104310",
+      "type": "text",
+      "data": "?\"\n\n---\n\n### 3. 기억 편향 (Availability Bias) — 🟡 주의\n\n**이 편향이란**: 최근의 긍정적 신호(어닝 beat, 고객 성장 가속)를 과도하게 가중하고, 과거의 경고 신호(Fee income 압력, NPL 상승 위험)를 무시하는 경향.\n\n**보고서에서 발견된 근거**:\n\n1. **Q4 2025 어닝 beat에 의한 과도한 낙관**:\n- Q4 Revenue beat +29% → \"시장의 체계적 저평가\" 프레이밍\n- 다만 Q4 2024 대비 YoY +45%는 Q3의 +44%와 거의 동일 (가속 아님)\n- EPS는 컨센서스와 정확히 일치 ($0.18) — 매출 beat가 이익 beat로 전환되지 않음\n\n2. **긍정적 신호는 크게, 부정적 신호는 작게**:\n- 강조: ARPAC QoQ +9%, Affluent +40%, Super Core +100%\n- 과소: Fee income 하락, 효율성 비율 상승 경고 (4-6분기), FGTS 규제 영향",
+      "processed": true
+    },
+    {
+      "uuid": "episode_7f9c035083ac4711",
+      "type": "text",
+      "data": "Fee income 하락, 효율성 비율 상승 경고 (4-6분기), FGTS 규제 영향\n\n3. **최근 기억에 의한 장기 추세 무시**:\n- 2024년의 NPL 리스크, 성장률 둔화, 경영진 교체 논의가 있었으나\n- 2026년 Q4 실적의 선전으로 인해 이런 우려들이 \"이미 극복됨\"으로 프레이밍\n\n**Self-Validation 결과**:\n\n📋 검증 가능 출처:\n1. **Q3→Q4 성장률 추이** — NU Quarterly Results (공개)\n- Q3: Revenue +44% YoY\n- Q4: Revenue +45% YoY\n- 변화: +1%p (가속이 아닌 안정화 수준)\n- 참고: Buffett이 지적한 \"성장 둔화 신호\"는 여전히 작동 중",
+      "processed": true
+    },
+    {
+      "uuid": "episode_49cf2d29cce44c9c",
+      "type": "text",
+      "data": "안정화 수준)\n- 참고: Buffett이 지적한 \"성장 둔화 신호\"는 여전히 작동 중\n\n2. **NPL 추이 장기 기록** — NU Financial Statements (분기별)\n- 2024 Q1: 90+ NPL 7.5% → 2025 Q4: 6.6%\n- 절대값은 개선했으나, 5-6% 이상은 산업 평균보다 여전히 높음\n- Dark data: Vintage별 NPL (경영진이 공개하지 않음)\n\n3. **Fee income 5년 추이** — Form 20-F (연간 기준)\n- 불명확 (분기별 정보 미공개로 추정 필요)\n- 다만 Q4 실적의 \"13.8%\" 수치가 새로운 저점\n\n🔍 투자자 확인 사항:\n- 20분기 데이터를 차트로 그린 후, 최근 4분기가 정말 \"새로운 추세\"인가, 아니면 \"노이즈\"인가 판단\n- NPL이 4-5%대로 구조적으로 낮아질 가능성 vs 5-7% 범위에서 변동할 가능성\n\n**교정 제안**:",
+      "processed": true
+    },
+    {
+      "uuid": "episode_f8e95aa88e7c4282",
+      "type": "text",
+      "data": "로 구조적으로 낮아질 가능성 vs 5-7% 범위에서 변동할 가능성\n\n**교정 제안**:\n\n1. **최근 1분기 데이터로 연간 가이던스를 조정하지 않기**\n- 현재: \"Q4 beat +29%가 2026년 성장 가속의 신호\"\n- 개선: \"최소 2-3분기 이상의 지속적 가속을 확인한 후 가이던스 상향하라.\"\n\n2. **긍정적 신호와 부정적 신호의 동등한 가중**\n- Affluent +40% 강조하면 Fee income 14.3% 하락도 동등하게 강조\n- ARPAC +9% QoQ 언급하면 NPL 6.6% 절대 수준도 동등하게 평가\n\n3. **\"추세\"를 확인하기 위해 4분기 이상의 데이터 사용**\n- Fee income: FY2024 16.4% → Q1-Q4 2025 월간 추이 필요\n- NPL: 절대값이 아닌 \"향후 12개월 예상\" 기준으로 평가",
+      "processed": true
+    },
+    {
+      "uuid": "episode_3e4dcd5e8db140b2",
+      "type": "text",
+      "data": "025 월간 추이 필요\n- NPL: 절대값이 아닌 \"향후 12개월 예상\" 기준으로 평가\n\n**질문**: \"Q4 한 분기의 실적이 당신의 연간 가이던스를 정말 3개월 단위로 변경할 수 있을까? 아니면 당신은 무의식적으로 '최신 뉴스'에 과민반응하고 있지 않은가?\"\n\n---\n\n### 4. 기업문화 평가 비대칭 (Halo Effect) — 🟡 주의\n\n**이 편향이란**: CEO의 탁월한 성과(Vélez의 0→131M 고객 달성)가 조직 전체를 긍정적으로 평가하게 만드는 경향. 경영진 변화와 조직 불안정이 경시됨.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_75132b65623c4cff",
+      "type": "text",
+      "data": ")가 조직 전체를 긍정적으로 평가하게 만드는 경향. 경영진 변화와 조직 불안정이 경시됨.\n\n**보고서에서 발견된 근거**:\n\n1. **CEO 등급 A-/A가 조직 전체 B+ 등급에 영향**:\n- Vélez 개인: \"비전+실행 탁월, 자본 배분 우수, 솔선수범(변동보상 포기)\"\n- 조직 전체: \"C-Suite 5명 이탈, COO 공석, RTO 반발, 구조조정\"\n- 다만 최종 Management 등급은 B+ (기대: B 정도가 맞을 것)\n\n2. **C-Suite 이탈에 대한 해석의 한쪽 편향**:\n- 긍정: \"전략적 세대교체로 글로벌 스케일업 인재 영입 (Eric Young, Eismann, Campos Neto)\"\n- 부정: \"COO 공석 + 신임 팀의 안착 미흡 + Vélez 의존도 극대\"\n- 실제: 둘 다 가능한데, 보고서는 긍정 해석만 강조",
+      "processed": true
+    },
+    {
+      "uuid": "episode_4e603104c9bd49b0",
+      "type": "text",
+      "data": "흡 + Vélez 의존도 극대\"\n- 실제: 둘 다 가능한데, 보고서는 긍정 해석만 강조\n\n3. **Glassdoor 4.3/5.0의 과도한 신뢰**:\n- 현황: 4.3은 Itaú(3.9) 대비 높음\n- 다만: 232개 리뷰로 통계적 크기가 작음\n- 2026년 RTO Phase 2(주 3일 출근)가 실행될 때 점수 변화를 아직 관찰하지 못함\n\n**Self-Validation 결과**:\n\n📋 검증 가능 출처:\n1. **Glassdoor Historical Trend** — Glassdoor.com (공개)\n- 현재 4.3/5.0 (432+ 리뷰)\n- 추적 필요: 2026년 3월 이후 점수 변화 (RTO Phase 2 영향)",
+      "processed": true
+    },
+    {
+      "uuid": "episode_f4e58e82cea24900",
+      "type": "text",
+      "data": "리뷰)\n- 추적 필요: 2026년 3월 이후 점수 변화 (RTO Phase 2 영향)\n\n2. **C-Suite 이탈 후계자 상황** — LinkedIn, Bloomberg\n- Youssef Lahrech (COO): 퇴사 후 현황 미추적\n- Vitor Olivier (CTO): \"창업 추구\" 명목, 실제 다음 회사 미공시\n- Eric Young (신임 CTO): Snap에서의 역할이 \"인프라 스케일링\"인데, 핀테크/금융 운영 경험 있는가?\n\n3. **COO 공석의 조직적 영향** — 회사 공시, 어닝콜\n- 현재: Vélez가 직접 COO 업무 흡수\n- 위험: 131M 고객 + 4개국 운영 + 글로벌 확장 중인 기업에서 CEO가 COO 역할을 지속 가능한가?",
+      "processed": true
+    },
+    {
+      "uuid": "episode_eec4cfb1617947ec",
+      "type": "text",
+      "data": "객 + 4개국 운영 + 글로벌 확장 중인 기업에서 CEO가 COO 역할을 지속 가능한가?\n\n🔍 투자자 확인 사항:\n- Glassdoor 점수 추이를 월별로 추적 (2026.03 ~ 2026.06)\n- LinkedIn에서 NU 이탈자 15명 이상 추적 → \"자발적 이탈\"인가 \"권고사직\"인가 판단\n- Eric Young의 첫 6개월 실적: 실제로 AI 모델 개선이 구체화되었는가?",
+      "processed": true
+    },
+    {
+      "uuid": "episode_fd85f205b6b44612",
+      "type": "text",
+      "data": "판단\n- Eric Young의 첫 6개월 실적: 실제로 AI 모델 개선이 구체화되었는가?\n\n**교정 제안**:\n\n1. **CEO와 조직을 분리하여 평가하기**\n- CEO (Vélez): A- (비전+실행 탁월)\n- 조직 (C-Suite+): B- (불안정 신호 강함)\n- 최종 Management Quality 등급은 이 둘의 불일치를 명시적으로 인정하고, Vélez 유고 시나리오에서의 리스크를 DCF에 반영\n\n2. **\"전략적 세대교체\"와 \"조직 혼란\"의 동시성 인식**\n- 좋은 인재를 영입했다고 해서 조직 리스크가 사라지지 않음\n- 기존 임원진과 신임 임원진의 갈등, 조직 문화 변화의 불확실성을 리스크로 인식\n\n3. **Glassdoor 점수의 선행 지표 해석**\n- 현재 4.3은 \"좋은 신호\"이지만, RTO Phase 2(2026.07)의 실행 결과를 기다려야 함\n- 기술 인재의 유출 여부가 AI 모트 지속에 영향을 미친다는 점 명시",
+      "processed": true
+    },
+    {
+      "uuid": "episode_2adb5be88834452f",
+      "type": "text",
+      "data": "를 기다려야 함\n- 기술 인재의 유출 여부가 AI 모트 지속에 영향을 미친다는 점 명시\n\n**질문**: \"Vélez가 내일 건강상 이유로 사임한다면, 당신의 745주에 대한 신념이 얼마나 흔들릴 것 같은가? 그 마음의 불안감이 바로 당신이 반영해야 할 Key Person Risk의 크기다.\"\n\n---\n\n### 5. 보유 기간 편향 (Endowment Effect) — 🟡 주의\n\n**이 편향이란**: 이미 보유한 자산에 대해, 미래에 같은 가격에 구매할 기회가 있다면 구매하겠는가 하는 기준으로 판단하지 못하는 경향.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_7f2d539d0b034f09",
+      "type": "text",
+      "data": "래에 같은 가격에 구매할 기회가 있다면 구매하겠는가 하는 기준으로 판단하지 못하는 경향.\n\n**보고서에서 발견된 근거**:\n\n1. **\"$14.67이 공정한 가격인가?\"라는 질문의 회피**:\n- DCF: $12.16 목표가 (현재 -17.1%)\n- 시장: $14.67\n- 보고서: \"시장이 Selic 리스크를 과도하게 반영하고 있다\"는 해석 → 즉, 현재가가 고평가라는 뜻\n- 다만: 그렇다면 기존 745주를 유지해야 하는가?\n\n2. **\"매도 신호\"의 명시적 기준 부재**:\n- Buy 신호: \"Revenue beat +29%, Affluent +40%, AI 모토 검증\"\n- Hold 신호: 정의되지 않음\n- Sell 신호: 정의되지 않음\n- 결과: 한 번 매수하면 계속 보유하는 편향\n\n3. **목표가 달성 시 행동 계획 부재**:\n- DCF $12.16 달성 → 매도할 것인가? 유지할 것인가?",
+      "processed": true
+    },
+    {
+      "uuid": "episode_501f70a42deb43c5",
+      "type": "text",
+      "data": "시 행동 계획 부재**:\n- DCF $12.16 달성 → 매도할 것인가? 유지할 것인가?\n- 공시되지 않음 → 암묵적으로 \"계속 보유\" 기각\n\n**Self-Validation 결과**:\n\n📋 검증 가능 출처:\n1. **Reverse DCF 분석** — DCF 보고서의 민감도 분석\n- 현재 $14.67 가격을 정당화하려면: WACC 12.5% 또는 TGR 3.0% 필요\n- 기본 가정: WACC 13.0%, TGR 2.5%\n- 시장이 요구하는 리스크 프리미엄이 우리 추정보다 낮은가?\n\n2. **Peer 밸류에이션** — Bloomberg, FactSet\n- NU: EV/EBITDA 2.9x (현재가 기준)\n- Inter: 2.5x (성장 20-30%)\n- Itaú: 0.8x (저성장)\n- 평가: NU의 프리미엄이 정당한가?",
+      "processed": true
+    },
+    {
+      "uuid": "episode_1b28beef9bc041cb",
+      "type": "text",
+      "data": "20-30%)\n- Itaú: 0.8x (저성장)\n- 평가: NU의 프리미엄이 정당한가?\n\n3. **마켓 할인율 분석** — DCF 보고서\n- 현재가 $14.67에서 암묵적으로 가정되는 성장률: 25-30%\n- 기본 DCF 가정: 32% Y1 성장\n- 차이: 시장이 2-7%p 낮은 성장을 가정 중 → 이것이 \"저평가\"인가 \"적정평가\"인가?\n\n🔍 투자자 확인 사항:\n- \"현재 $14.67 가격이라면, 나는 새로 사나?\" → 솔직한 답 필요\n- \"만약 내가 새로 산다면, 몇 달러짜리 포지션을 만들 것인가?\" → 현재 보유 규모와 비교\n- 포트폴리오에서 745주를 차지하는 가중치가 정말 \"기본 신념\"에 합당한가, 아니면 \"과거의 수익 때문인가\"?",
+      "processed": true
+    },
+    {
+      "uuid": "episode_545fb61768a34013",
+      "type": "text",
+      "data": "주를 차지하는 가중치가 정말 \"기본 신념\"에 합당한가, 아니면 \"과거의 수익 때문인가\"?\n\n**교정 제안**:\n\n1. **명시적 매도/리밸런싱 기준 설정**\n- Scenario B (Base Case 달성) 시: 목표가 $12.24 → 매도량 25% (이익 실현)\n- Scenario A (Bull) 달성 시: 목표가 $15.90 → 매도량 50% (이익 극대화)\n- Scenario C (Bear) 진입 신호:\n* C-Suite 추가 1명 퇴사\n* Mercado Pago net financial margin 양수 전환\n* Fee income 3분기 연속 13% 미만\n→ 시점에 매도량 50% 이상\n\n2. **현재 보유 규모의 정당성 검토**\n- 포트폴리오 4번째 규모($10.9K)가 기본 conviction에 맞는가?",
+      "processed": true
+    },
+    {
+      "uuid": "episode_6af450ad829c496f",
+      "type": "text",
+      "data": "검토**\n- 포트폴리오 4번째 규모($10.9K)가 기본 conviction에 맞는가?\n- 기본 가정: \"중남미 디지털 뱅킹 리더\" → 그 가중치는 포트폴리오의 5-10%가 타당\n- 현재 약 6-8% 추정 → 이미 적절하나, 다운사이드 리스크를 감안하면 감축 고려\n\n3. **리스크-수익 재평가**\n- 현재: Bull case 25%, Base case 40%, Bear case 15%, Deep Bear 10%\n- 개선: Vélez 유고 시나리오를 별도 추가 (5-10% 확률), 전체 확률 재분배\n\n**질문**: \"당신이 현재 NU를 한 주도 보유하지 않았다면, $14.67 가격에 745주를 새로 매수할 것 같은가? 정직한 답을 하라.\"\n\n---\n\n## 보조 편향 스캔",
+      "processed": true
+    },
+    {
+      "uuid": "episode_8eea855b232b4a56",
+      "type": "text",
+      "data": "45주를 새로 매수할 것 같은가? 정직한 답을 하라.\"\n\n---\n\n## 보조 편향 스캔\n\n| 편향 | 상태 | 간략 평가 |\n|------|------|----------|\n| **Anchoring Effect** | 🟢 양호 | DCF $12.16을 기본 앵커로 삼고, 시장 $14.67과 비교 중. 가격이 아닌 가치에 앵커링된 것으로 보임 |\n| **Narrative Fallacy** | 🟡 주의 | \"Infinite Game\"과 \"Digital Banking Revolution\"이 깔끔한 스토리. 실제 복잡성(Selic, 경쟁, 규제)이 충분히 내러티브에 포함되었는가? |\n| **Base Rate Neglect** | 🟡 주의 | \"디지털 뱅킹\" 서브섹터의 성공 확률(Chime, Varo 같은 미국 네오뱅크의 40%+ 실패율)과 비교하지 않음 |\n| **False Balance** | 🟢 양호 | Bull vs Bear 증거를 균형있게 제시하려 노력.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_27603f4d9ad34b63",
+      "type": "text",
+      "data": "Balance** | 🟢 양호 | Bull vs Bear 증거를 균형있게 제시하려 노력. 다만 \"모든 분석이 Buy 방향\"이 정말 균형인가? |\n| **Availability Bias in History** | 🟡 주시 | 성공 사례(Square→Block의 글로벌 확장, Stripe의 고수익성 달성)를 중남미 사례와 비교하지 않음 |\n| **Illusion of Control** | 🟡 주의 | 장기 보유 기간(3년+)이 \"저절로 가치가 실현\"될 것이라는 암묵적 가정. 정기적 리밸런싱이 필요 |\n\n---\n\n## 검증 결과 무효 (Invalidated Counterarguments)",
+      "processed": true
+    },
+    {
+      "uuid": "episode_921c9195c3be49c5",
+      "type": "text",
+      "data": "---\n\n## 검증 결과 무효 (Invalidated Counterarguments)\n\n| # | 초기 주장 | 무효 사유 | 교훈 |\n|---|----------|---------|------|\n| 1 | \"Fee income 압력은 산업적 현상이므로 우려하지 않아도 된다\" | 부분 무효. 산업적 현상인 것은 맞으나, NU가 이를 극복하는 크로스셀이 실제로 구현되지 않고 있음 (14.3% 기록이 증거). 따라서 NU의 ARPAC 성장이 이자수익 중심(신용)이며, fee income 회복은 추가적 리스크 요인이 될 수 있다는 점을 간과함 | 산업 구조적 문제라고 해서 개별 기업의 전략적 대응을 면제하지 않는다. NU가 fee income을 회복할 구체적 경로를 요구하라 |\n| 2 | \"Mercado Pago의 net financial margin이 음수이므로 아직 위협 아님\" | 부분 무효.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_91c35eabc55a459f",
+      "type": "text",
+      "data": "o의 net financial margin이 음수이므로 아직 위협 아님\" | 부분 무효. 현재는 음수이나, Mercado Libre($100B 시가총액)의 보조금 투자로 2-3년 내 양수 전환 가능성이 높음 (신용포트폴리오 +118% YoY 추격 속도 반영). \"음수이므로 위협 아님\"은 과거 상태에 기반한 판단 | Mercado Pago의 여신 마진 전환을 3개월마다 추적하고, 양수 전환 신호 시 down case 확률을 50%+ 상향 |\n| 3 | \"C-Suite 5명 이탈은 전략적 세대교체이므로 조직 강화의 신호\" | 부분 무효. 세대교체는 사실이나, 신임 임원진의 안착 실패 리스크를 충분히 평가하지 않음.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_7528a89c8eea4b2c",
+      "type": "text",
+      "data": "분 무효. 세대교체는 사실이나, 신임 임원진의 안착 실패 리스크를 충분히 평가하지 않음. Eric Young의 금융/핀테크 경험, Campos Neto의 핀테크 운영 역량이 확인되지 않은 상태에서 \"강화\"라고 단정할 수 없음 | 신임 임원진의 첫 6개월 실적(Eric Young의 AI 모델 개선 구체화, Campos Neto의 규제 진전 기여)을 평가한 후 재판정하라 |\n| 4 | \"미국 진출은 'de minimis'이므로 중남미 성장에 영향 없음\" | 일부 무효. Vélez의 \"de minimis\" 표현은 정성적이며, 실제 투자 규모가 $100-200M인지 $500M인지 미공시. 기회비용이 실제로 얼마나 \"미니미\"한지 검증 불가 | Q1 2026 결과 발표 시 미국 부문의 손실액과 투자 자산액을 구체화하도록 요구.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_44d7d6b775ef446f",
+      "type": "text",
+      "data": "| Q1 2026 결과 발표 시 미국 부문의 손실액과 투자 자산액을 구체화하도록 요구. \"de minimis\"는 명확한 수치로 정의될 때만 신뢰성이 있음 |\n| 5 | \"Affluent +40%, Super Core +100% 성장은 ARPAC 천장 상향의 증거\" | 부분 무효. 세그먼트 고객 수의 성장을 보고했으나, 이들 세그먼트의 개별 ARPAC이 얼마나 높은지는 미공개. \"고객 40% 성장 = ARPAC 40% 상승\"이 아님 | NU가 세그먼트별 ARPAC을 공시하도록 요구. 또는 \"Affluent 세그먼트의 평균 ARPAC이 전체 평균 $15의 2배 = $30\"이라는 구체적 가정을 제시하고 검증하라 |\n\n---\n\n## 메타 편향 자가 점검\n\n**이 편향 분석 자체가 편향에 빠지지 않았는가?**\n\n1. **역방향 확증 편향 (Reverse Confirmation Bias)**:\n- ✅ 확인됨: 이 분석이 \"음의 증거\"를 과도하게 찾지는 않았는가?",
+      "processed": true
+    },
+    {
+      "uuid": "episode_3ce13599235e4155",
+      "type": "text",
+      "data": "n Bias)**:\n- ✅ 확인됨: 이 분석이 \"음의 증거\"를 과도하게 찾지는 않았는가?\n- 자가점검: Positive signals (Revenue beat, ARPAC 가속, NPL 개선)도 충분히 인정했다. 다만 이들이 \"기본 스토리를 강화하는가\"를 엄격하게 검증했다는 점에서 균형을 유지하고 있음.\n- 결론: 역방향 편향 위험은 낮음. 오히려 기존 보고서의 확증 편향을 보정하는 것이 이 분석의 역할.\n\n2. **거짓 균형 (False Balance)**:\n- ✅ 확인됨: 포지티브와 네거티브를 50:50으로 만들지는 않았는가?\n- 자가점검: 원본 보고서가 이미 \"기본적으로 긍정적\"이므로, 이 분석이 \"부정적 신호를 균형있게 부각\"하는 것은 보정(correction)이지 false balance가 아님.\n- 결론: 균형 위험 낮음.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_f5a0d80e4a10448a",
+      "type": "text",
+      "data": "(correction)이지 false balance가 아님.\n- 결론: 균형 위험 낮음.\n\n3. **가용성 편향 (Availability Bias in Bias Analysis)**:\n- ⚠️ 주의: 최근의 드라마틱한 사건(C-Suite 5명 이탈)을 과도하게 강조하지는 않았는가?\n- 자가점검: C-Suite 이탈을 RED로 평가했으나, 이것이 조직 \"붕괴\"는 아니며, Management 보고서도 \"세대교체\"의 가능성을 인정했음. 따라서 평가의 \"심각도\"는 적절 (RED가 아닌 YELLOW일 가능성도 있지만, KEY PERSON RISK를 감안하면 RED가 타당).\n- 결론: 적절한 수준의 경각심 유지.\n\n**최종 메타 판정**: 이 편향 분석이 스스로에 대해 과도하게 비판적이지는 않은가? → **아니다.** 원본 보고서의 확증 편향이 명백하고(Fee income 누락, Mercado Pago 저평가, C-Suite 리스크 분산), 그것을 지적하는 것은 건강한 보정.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_33711adb5107414a",
+      "type": "text",
+      "data": "do Pago 저평가, C-Suite 리스크 분산), 그것을 지적하는 것은 건강한 보정.\n\n---\n\n## 종합 판단\n\n### 편향이 결론을 바꾸는가?\n\n**YES. 신뢰도 1단계 하향 필요.**\n\n| 영역 | 원본 결론 | 편향 분석 후 | 조정 사유 |\n|------|---------|-----------|---------|\n| **투자 의견** | Buy (Moderate-High) | Buy (Conservative) | 3가지 미해결 핵심 리스크 |\n| **기본 입장** | B 등급, $12.16 DCF | B- 등급, $10-11 하향 재평가 가능성 | C-Suite + Mercado Pago + Fee income |\n| **conviction** | Buy 신뢰도 70-75% | Buy 신뢰도 55-60% | 불확실성 25-35%p 상향 인식 |\n| **포지션 조정** | 현재 745주 유지 | 745주의 30-50% 리밸런싱 고려 | Vélez Key Person Ri",
+      "processed": true
+    },
+    {
+      "uuid": "episode_4a684525892a4b80",
+      "type": "text",
+      "data": "5주 유지 | 745주의 30-50% 리밸런싱 고려 | Vélez Key Person Risk 반영 |\n\n**세부 조정:**\n\n1. **Fee income 하락이 구조적이라면** (50% 확률):\n- ARPAC $22-25 달성이 어려워짐 (이자수익만으로 성장해야 함)\n- DCF Base Case $12.24 → $10.50으로 하향 (14% 감소)\n\n2. **Mercado Pago가 3년 내 경합(margin 양수 전환)한다면** (35% 확률):\n- NU의 신용카드 점유율 하락 → ARPAC 성장 제약\n- DCF Base Case $12.24 → $9.80으로 하향 (20% 감소)\n\n3. **Vélez 유고 시나리오** (10% 확률, 하지만 고 영향도):\n- 밸류에이션 -20~30% (Key Person Risk 프리미엄)\n- $12.16 → $8.50-9.70\n\n**확률 가중 평균 재계산:**",
+      "processed": true
+    },
+    {
+      "uuid": "episode_3bdbe396980a4179",
+      "type": "text",
+      "data": "k 프리미엄)\n- $12.16 → $8.50-9.70\n\n**확률 가중 평균 재계산:**\n\n기존 DCF 5-scenario (Deep Bear 10%, Bear 15%, Base 40%, Bull 25%, Super Bull 10%) + Vélez 유고 시나리오(5-10%)를 고려하면:\n\n```\n새로운 가중 목표가:\n= (Deep Bear 10% × $3.77)\n+ (Bear 15% × $6.52)\n+ (Base 40% × $10.50, 원래 $12.24에서 조정)\n+ (Bull 25% × $13.50, 원래 $15.90에서 조정)\n+ (Super Bull 10% × $17.00)\n+ (Vélez Risk 5% × $9.00)\n\n= $0.38 + $0.98 + $4.20 + $3.38 + $1.70 + $0.45\n= $10.81/주\n\nvs 현재 $14.67 → -26% 할인\n```",
+      "processed": true
+    },
+    {
+      "uuid": "episode_81d6a9402fca4680",
+      "type": "text",
+      "data": "0 + $0.45\n= $10.81/주\n\nvs 현재 $14.67 → -26% 할인\n```\n\n**수정된 판단:**\n- 현재가 $14.67은 기본 케이스 대비 **상향 평가 상태**\n- Buy 신뢰도는 유지하나, **신뢰도의 폭(confidence interval) 확대** 필요\n- 745주 포지션은 **현금화 고려 대상** (50% 매도, 375주 남김)\n\n---\n\n## 이 분석을 강화하기 위한 3가지 행동\n\n1. **Fee income 구조적 하락 확정 추적 (Q1-Q2 2026)**\n- Managerial P&L로 분기별 수수료 비중 공시 요청\n- 3분기 연속 14% 미만이면 구조적 하락 확정 → Down Case 확률 상향\n\n2. **Mercado Pago 여신 여부 분기별 모니터링**\n- MeLi Q1 2026 어닝: 신용포트폴리오 성장률, NPL, net financial margin 추적\n- Margin 양수 전환 신호 시 → Bear Case 확률 15%→30% 상향",
+      "processed": true
+    },
+    {
+      "uuid": "episode_6bb9f9669014455d",
+      "type": "text",
+      "data": "추적\n- Margin 양수 전환 신호 시 → Bear Case 확률 15%→30% 상향\n\n3. **Eric Young의 AI 전략 구체화 평가 (6개월 이후)**\n- Q2 2026: nuFormer 멕시코 신용카드 적용 결과 검증\n- 신규 모델의 NPL 개선 실적이 브라질과 동등한가?",
+      "processed": true
+    },
+    {
+      "uuid": "episode_eb19b2a0bff74020",
+      "type": "text",
+      "data": "멕시코 신용카드 적용 결과 검증\n- 신규 모델의 NPL 개선 실적이 브라질과 동등한가?\n\n---\n\n## 최종 질문\n\n**당신에게 던질 가장 중요한 한 문장:**\n\n\"당신이 포트폴리오의 4번째 규모인 745주를 보유한 사실이, DCF $12.16 vs 시장 $14.67의 불일치를 평가할 때 당신의 객관성을 호도하지 않고 있는가? 만약 당신이 이 주식을 한 주도 보유하지 않았다면, 오늘 $14.67에 745주를 매수할 것인가?\"\n\n---\n\n## 포트폴리오 권장 조치",
+      "processed": true
+    },
+    {
+      "uuid": "episode_5f96d0e939f941f5",
+      "type": "text",
+      "data": "오늘 $14.67에 745주를 매수할 것인가?\"\n\n---\n\n## 포트폴리오 권장 조치\n\n| 권장 | 우선순위 | 타이밍 |\n|-----|---------|--------|\n| **745주 중 50% (375주) 매도** | 높음 | 즉시 또는 Q1 2026 마지막 주 (효율성 비율 데이터 공시 후) |\n| **매도 수익금 배치** | 높음 | 나머지 NU 375주 + 다른 종목으로 분산 |\n| **리밸런싱 목표** | 높음 | NU 포트폴리오 가중치 6-8% → 3-4%로 축소 |\n| **모니터링 강화** | 높음 | Q1-Q2 2026 실적 발표 후 재평가 |\n\n---\n\n## 분석 이력",
+      "processed": true
+    },
+    {
+      "uuid": "episode_64e138c7f0084c56",
+      "type": "text",
+      "data": "* | 높음 | Q1-Q2 2026 실적 발표 후 재평가 |\n\n---\n\n## 분석 이력\n\n| 날짜 | 버전 | 수정 사항 |\n|-----|------|---------|\n| 2026-03-25 | v1.0 | 초안: 5개 핵심 편향 (확증 편향 RED, 과신 편향 YELLOW, 기억 편향 YELLOW, 문화 평가 비대칭 YELLOW, 보유 편향 YELLOW), 메타 점검, 포트폴리오 권장 조치 |\n\n---\n\n**분석가**: Claude Haiku 4.5 (Bias Worker, Phase 4a)\n**검토 기준**: SKILL.md v2.1 (Self-Validation 필수)\n**최종 판정**: **다음 분석은 기존 Qualitative 보고서의 C1 Management Quality 등급을 H→M으로 하향 조정하고, Fee income 비중 하락을 명시적으로 기재할 것을 권고합니다.**\n\n---\n\n---\n\n## 관련 분석",
+      "processed": true
+    },
+    {
+      "uuid": "episode_b96874ac74e9459d",
+      "type": "text",
+      "data": "비중 하락을 명시적으로 기재할 것을 권고합니다.**\n\n---\n\n---\n\n## 관련 분석\n\n- [[NU_company_qualitative|NU 기업 정성 분석]]\n- [[NU_financial_statements|NU 재무제표 분석]]\n- [[NU_industry_analysis|NU 산업 분석]]\n- [[NU_management_culture|NU 경영진·문화 분석]]\n- [[NU_dcf_valuation|NU DCF 밸류에이션]]\n- [[NU_quant_signal|NU 퀀트 시그널]]\n- [[NU_2025-Q4|NU 2025-Q4 어닝콜]]\n- [[CROSS_VALIDATION_SUMMARY|교차 검증 요약]]\n- [[NU_company_qualitative_old|NU_company_qualitative_old]]\n- [[NU_cross_validation|NU 교차 검증]]\n- [[NU_unverified|NU 미검증 항목]]\n- [[portfolio|포트폴리오 현황]]\n-",
+      "processed": true
+    },
+    {
+      "uuid": "episode_bc22879629f84edf",
+      "type": "text",
+      "data": "_unverified|NU 미검증 항목]]\n- [[portfolio|포트폴리오 현황]]\n- [[portfolio_position_sizing|포지션 최적화]]\n\n<!-- [2026-03-29] report-propagator: 정성분석 등급 B+(84.8%)→B(79.0%) 전파, 편향분석 verdict 조정 -->\n\n=== NU_industry_analysis.md ===\n# 중남미 디지털 뱅킹 산업 분석 — NU Holdings 투자 아이디어 검증\n\n_분석일: 2026-03-24_\n\n> **산업**: Latin America Digital Banking / Fintech\n> **분석 대상 기업**: Nu Holdings (NYSE: NU)\n> **참조 기존 분석**: NU_Qualitative_Analysis (B, Buy Moderate-High), NU_Financial_Statements (EQS B+/76.3%), NU_Earnings_Call_Q4_2025\n\n---",
+      "processed": true
+    },
+    {
+      "uuid": "episode_33e50b0beaaf40eb",
+      "type": "text",
+      "data": "ts (EQS B+/76.3%), NU_Earnings_Call_Q4_2025\n\n---\n\n## Phase 0: Investment Thesis Connection\n\n### 기존 투자 아이디어 (Qualitative Report)\n\n1. **Idea 1 (Confidence H)**: ARPAC $15→$22-25 크로스셀 성장 엔진 과소평가\n2. **Idea 2 (Confidence M→M-H)**: AI 언더라이팅이 진정한 모트\n3. **Idea 3 (Confidence L)**: 미국 시장 진출 — 비연속적 TAM 확대\n\n### 산업 수준 검증 질문 5가지",
+      "processed": true
+    },
+    {
+      "uuid": "episode_4417fc4744bb4561",
+      "type": "text",
+      "data": ")**: 미국 시장 진출 — 비연속적 TAM 확대\n\n### 산업 수준 검증 질문 5가지\n\n| # | 산업 검증 질문 | 연결 투자 아이디어 | 우선 섹션 |\n|---|-------------|----------------|----------|\n| IQ1 | 중남미 디지털 뱅킹의 profit pool이 전통 은행에서 디지털로 **구조적**으로 이전 중인가, 아니면 일시적 비용 우위에 불과한가? | Idea 1 (ARPAC 심화) | Section 1 (**DEEP**) |\n| IQ2 | 브라질 62% 침투 이후 디지털 뱅킹의 **잔여 TAM**은 얼마이며, 성장률 감속 시점은? | Idea 1 (성장 천장) | Section 3 (LIGHT) |\n| IQ3 | Mercado Pago, Itaú iti 등 경쟁자의 **투자 강도**가 과잉 공급을 만들고 있는가?",
+      "processed": true
+    },
+    {
+      "uuid": "episode_06f8530547db4c61",
+      "type": "text",
+      "data": "Pago, Itaú iti 등 경쟁자의 **투자 강도**가 과잉 공급을 만들고 있는가? | Idea 1, 2 (모트 지속성) | Section 2, 4 (**DEEP**) |\n| IQ4 | AI 기반 언더라이팅이 산업 내 **winner-take-most** 구조를 만드는가, 아니면 범용 기술이 되어 모트가 소멸하는가? | Idea 2 (AI 모트) | Section 5 (**DEEP**) |\n| IQ5 | Selic 금리 하락 사이클이 산업 수익성(NIM)에 미치는 **구조적 영향**은? Float Income 의존도 높은 플레이어에 불리한가? | Financial Statements FVQ5 | Section 6 (LIGHT) |\n\n### 섹션 우선순위",
+      "processed": true
+    },
+    {
+      "uuid": "episode_e0f437c495e4432d",
+      "type": "text",
+      "data": "atements FVQ5 | Section 6 (LIGHT) |\n\n### 섹션 우선순위\n\n| Section | 깊이 | 근거 |\n|---------|-----|-----|\n| 1. Value Chain & Profit Pool | **DEEP** | IQ1 — profit migration 방향이 thesis 핵심 |\n| 2. Competitive Landscape | **DEEP** | IQ3 — 경쟁 역학이 moat 지속성 결정 |\n| 3. Structural Growth | LIGHT | IQ2 — TAM은 기존 보고서에서 상당 부분 다룸 |\n| 4. Capital Cycle | **DEEP** | IQ3 — 과잉 투자 여부가 마진 궤적 결정 |\n| 5. Technology Disruption | **DEEP** | IQ4 — AI 모트 지속성의 산업 수준 검증 |\n| 6. External Environment | LIGHT | IQ5 — Selic/규제는 보조적 요인 |",
+      "processed": true
+    },
+    {
+      "uuid": "episode_fbdc0e6f84d14fd6",
+      "type": "text",
+      "data": "l Environment | LIGHT | IQ5 — Selic/규제는 보조적 요인 |\n\n---\n\n## Phase 1: Industry Foundation\n\n### Section 1: Value Chain & Profit Pool ★ DEEP ★\n\n#### 1A. 중남미 디지털 뱅킹 Value Chain\n\n중남미 금융 서비스의 value chain을 5단계로 구분한다:",
+      "processed": true
+    },
+    {
+      "uuid": "episode_742fbb0312f14815",
+      "type": "text",
+      "data": "Value Chain\n\n중남미 금융 서비스의 value chain을 5단계로 구분한다:\n\n| Stage | 주요 활동 | 대표 플레이어 | Operating Margin (2025) | 5년 전 대비 | Profit Migration |\n|-------|---------|------------|----------------------|-----------|-----------------|\n| **1. 고객 획득 & 온보딩** | 앱 다운로드→KYC→계좌 개설 | Nu ($19.2/CAC), Inter, PicPay | 극저(투자 단계) | 변동 없음 | ← 디지털이 압도적 우위. 전통 은행 CAC $91-115 vs Nu $19 |\n| **2. 예금 & 결제** | 수신, Pix, 송금, 카드 결제 | Nu, Mercado Pago, PicPay, 전통 은행 | 낮음 (Float spread) | ↑ Pix로 결제 수수료 압축 | → Float income은 Selic에 연동.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_99ec4dea2d4b4c59",
+      "type": "text",
+      "data": ") | ↑ Pix로 결제 수수료 압축 | → Float income은 Selic에 연동. Pix가 카드 수수료를 잠식 |\n| **3. 여신 (Lending)** | 신용카드, 개인대출, 담보대출, BNPL | Nu, Mercado Pago, Inter, 전통 은행 | **높음 (NIM 15-20%+)** | ↑↑ 디지털 대출 급성장 | ← **이익 집중 스테이지. Nu/MeLi가 신용카드 신규 발급의 36% 차지** |\n| **4. 투자 & 보험** | 증권 중개, 펀드, 보험 상품 | Nu, XP Inc., BTG Pactual | 중간 (수수료 기반) | → 상대적 안정 | → Fee income 원천이나 Nu의 비중은 14.3%로 하락 중 |\n| **5. 인프라 & 데이터** | 코어 뱅킹, AI/ML, 클라우드, 규제 준수 | AWS, 자체 구축(Nu), 핀테크 인프라(Galileo) | 높음 | ↑ AI 투자 급증 | ← 기술 인프라가 모트 형성.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_02c183fe085e480a",
+      "type": "text",
+      "data": "인프라(Galileo) | 높음 | ↑ AI 투자 급증 | ← 기술 인프라가 모트 형성. 자체 구축 vs 외주 격차 확대 |\n\n#### 1B. Profit Pool 분석 — 이익은 어디로 이동하고 있는가?\n\n**핵심 발견: 이익이 Stage 3(여신)으로 급격히 집중되고 있다.**\n\n브라질 금융 산업의 총 이익 풀은 연간 ~BRL 120B+ (약 $24B+) 규모이며, 전통 5대 은행(Itaú, Bradesco, BB, Caixa, Santander)이 여전히 분기 합산 BRL 29B+ 이익을 기록한다. 그러나 **성장분(incremental profit pool)의 배분이 급격히 변화**하고 있다:\n\n1. **신용카드 신규 발급 성장분의 36%를 Nu + Mercado Pago가 차지** — 2년 전 25% 미만에서 급상승. 이는 가장 수익성 높은 여신 상품의 성장분이 디지털 플레이어로 이전 중임을 의미.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_b84ec35830af426e",
+      "type": "text",
+      "data": "상승. 이는 가장 수익성 높은 여신 상품의 성장분이 디지털 플레이어로 이전 중임을 의미.\n\n2. **디지털 은행 ROE가 전통 은행을 추월하기 시작** — 디지털 은행 평균 ROE 19.1% (2024 중반) → Nu 개별 ROE 33% (Q4 2025). 전통 은행 ROE는 Itaú 20%, Bradesco 15% 수준. 이 격차는 운영 레버리지가 반영되면서 확대 추세.\n\n3. **결제(Stage 2)의 이익이 구조적으로 압축** — Pix가 월 40억 건 거래를 처리하며 카드 수수료를 잠식. 결제에서의 이익은 float spread(예금 잔고 × 금리)으로 이동했으나, 이는 Selic 하락 시 축소 리스크.\n\n4. **투자/보험(Stage 4)는 아직 전통 플레이어 우세** — XP Inc., BTG Pactual이 지배. Nu의 fee income 비중 14.3%는 이 스테이지에서 크로스셀이 아직 미성숙임을 반영.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_057991ba02ec44e2",
+      "type": "text",
+      "data": "fee income 비중 14.3%는 이 스테이지에서 크로스셀이 아직 미성숙임을 반영.\n\n**Profit Pool Migration 방향 요약:**\n\n```\n[전통 은행 이익 풀] ──────→ [디지털 은행 이익 풀]\n지점 기반 여신              AI 기반 여신\n높은 CAC ($91-115)          저CAC ($19)\nROE 15-20%                 ROE 19-33%\n\n이전 속도: 연간 2-3%p씩 가속 중\n```",
+      "processed": true
+    },
+    {
+      "uuid": "episode_1daf1031a48646ac",
+      "type": "text",
+      "data": "ROE 19-33%\n\n이전 속도: 연간 2-3%p씩 가속 중\n```\n\n**Thesis Connection**: Value chain 구조는 투자 아이디어를 **강력히 지지**한다. Profit pool이 Stage 3(여신)에 집중되고, Nu가 이 스테이지에서 가장 빠르게 점유율을 확대하고 있다. Nu의 비용 우위(CAC 1/5, 효율성 비율 19.9% vs 전통 은행 ~50%)는 일시적 현상이 아닌 지점 없는 디지털 모델의 **구조적 우위**이며, 이 구조적 차이가 좁혀지려면 전통 은행이 지점 네트워크를 대규모 축소해야 하는데, 이는 노조/정치적으로 극도로 어렵다. IQ1에 대한 답: **구조적 이전이 맞다.**\n\n그러나 fee income(Stage 4)에서의 profit pool 확보는 미진하며, 이는 기존 보고서의 fee income 하락(16.4%→14.3%) 우려와 일치한다.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_77e9220142b945d1",
+      "type": "text",
+      "data": ", 이는 기존 보고서의 fee income 하락(16.4%→14.3%) 우려와 일치한다.\n\n---\n\n### Section 2: Competitive Landscape ★ DEEP ★\n\n#### 2A. 시장 구조\n\n**브라질 디지털 뱅킹 — 고객 수 기준 시장 점유율 (2025년):**",
+      "processed": true
+    },
+    {
+      "uuid": "episode_a21955a660154791",
+      "type": "text",
+      "data": "시장 구조\n\n**브라질 디지털 뱅킹 — 고객 수 기준 시장 점유율 (2025년):**\n\n| Rank | Player | 고객 수 | YoY 성장 | 시장 점유율 | 유형 |\n|------|--------|--------|---------|-----------|-----|\n| 1 | Caixa | ~150M+ | +2% | ~28% | 국영 은행 |\n| 2 | Bradesco | 110.4M | +3% | ~20% | 전통 민간 |\n| 3 | **Nu Holdings** | **109.3M** | **+12%** | **20.3%** | **디지털** |\n| 4 | Itaú | ~59M | +5% | 10.9% | 전통 민간 |\n| 5 | BB | ~80M+ | +2% | ~15% | 국영 |\n| 6 | Mercado Pago | 66.1M | +16.3% | ~12% | 핀테크 (전자상거래) |\n| 7 | PicPay | 65.6M | +12% | ~12% | 디지털 결제 |\n|",
+      "processed": true
+    },
+    {
+      "uuid": "episode_611f8df98b514808",
+      "type": "text",
+      "data": "|\n| 7 | PicPay | 65.6M | +12% | ~12% | 디지털 결제 |\n| 8 | Inter | 40M+ | +18.1% | ~7% | 디지털 은행 |\n\n**시장 구조 특성:**\n- **HHI**: 중간 수준. 상위 5개 기관이 ~80%+ 고객 커버하나, 디지털 플레이어 진입으로 분산 중\n- **방향**: 전통 은행의 점유율이 점진적으로 하락, 디지털 은행의 점유율이 연 2-3%p씩 상승\n- **핵심 역학**: 고객 수 성장은 둔화(포화 접근)하나, **수익 점유율(revenue share)** 성장은 가속 — 고객당 수익화 심도가 깊어지고 있기 때문\n\n#### 2B. 경쟁자별 전략 & 위협 수준\n\n**Tier 1: 직접적 위협**",
+      "processed": true
+    },
+    {
+      "uuid": "episode_8edff3845d0c4473",
+      "type": "text",
+      "data": "때문\n\n#### 2B. 경쟁자별 전략 & 위협 수준\n\n**Tier 1: 직접적 위협**\n\n| 경쟁자 | 전략 | Nu 대비 강점 | Nu 대비 약점 | 위협 수준 |\n|--------|-----|-----------|-----------|---------|\n| **Mercado Pago** | 전자상거래 → 금융 확장. CDI 105-120% 예금 공세로 자금 유치, 신용카드 급성장 | 66M 고객 + 전자상거래 생태계 트래픽. 소비자 신용 마진 46% (Nu 19%) | Net financial margin 음수 (-6~7%). 독립 금융앱이 아닌 마켓플레이스 부속 | **높음** — 유일하게 Nu의 고객 획득 비용에 필적하는 유통 채널 보유 |\n| **Itaú (iti + 본체)** | 디지털 전환 + 기존 고객 방어. Itaú One 통합 앱, AI 도입 가속 | 기업금융/자산관리/프라이빗뱅킹 크로스셀.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_af341be318274f3c",
+      "type": "text",
+      "data": "Itaú One 통합 앱, AI 도입 가속 | 기업금융/자산관리/프라이빗뱅킹 크로스셀. BRL 29B+ 분기 이익의 자원 | CAC $114.6 (Nu의 6배). 지점 비용 구조가 효율성 제한 | **중간** — 기존 수익 풀 방어에는 강하나, 디지털 신규 고객 획득에서 열세 |\n| **Inter** | \"슈퍼앱\" 전략. 은행+투자+쇼핑+여행을 단일 앱에 통합 | 크로스셀 비율 높음, 40M+ 고객. 디지털 전용으로 비용 효율적 | 규모가 Nu의 1/3. ARPAC이 Nu보다 낮음 | **중간** — Nu의 축소판. 차별화 포인트가 \"슈퍼앱\"이나 실행력에서 Nu 대비 열세 |\n\n**Tier 2: 간접적 위협**",
+      "processed": true
+    },
+    {
+      "uuid": "episode_f1f8686b18d84a5a",
+      "type": "text",
+      "data": "인트가 \"슈퍼앱\"이나 실행력에서 Nu 대비 열세 |\n\n**Tier 2: 간접적 위협**\n\n| 경쟁자 | 위협 유형 | 평가 |\n|--------|---------|-----|\n| PicPay (66M) | 결제 중심, 여신 확장 시도 | **낮음** — 결제 앱에서 은행으로의 전환 성공 사례가 드묾 |\n| C6 Bank (30M+) | JPMorgan 투자 받은 디지털 은행 | **낮음** — 차별화 부족, 규모 열세 |\n| PagBank (34M) | PagSeguro의 뱅킹 전환 | **낮음** — 결제 하드웨어 중심, 뱅킹 전환 더딤 |\n| Big Tech (Apple Pay, Google) | 글로벌 결제 인프라 | **매우 낮음** — 중남미 규제 환경에서 직접 뱅킹 진출 난이 |\n\n#### 2C. Five Forces 요약",
+      "processed": true
+    },
+    {
+      "uuid": "episode_5bdbb1225b4d4162",
+      "type": "text",
+      "data": "미 규제 환경에서 직접 뱅킹 진출 난이 |\n\n#### 2C. Five Forces 요약\n\n| Force | Rating | Direction | Evidence |\n|-------|--------|-----------|---------|\n| 신규 진입 위협 | **Medium** | 약화 중 | 은행 라이센스/자본 요건이 진입 장벽.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_942c6bd594344047",
+      "type": "text",
+      "data": "진입 위협 | **Medium** | 약화 중 | 은행 라이센스/자본 요건이 진입 장벽. 소규모 핀테크 생존율 하락, 후기 단계 투자 집중 |\n| 공급자 교섭력 | **Low** | 안정 | 클라우드 인프라 범용화, 코어 뱅킹 자체 구축 가능 |\n| 구매자 교섭력 | **Medium-High** | 강화 중 | 전환 비용 낮음(앱 삭제), CDI 105-120% 예금 경쟁으로 고객 유치 비용 상승 |\n| 대체재 위협 | **Low** | 안정 | Pix가 카드 결제를 대체하나, 여신 상품은 대체 어려움 |\n| 산업 내 경쟁 | **High** | 강화 중 | Nu vs Mercado Pago의 신용카드 점유율 경쟁 가속, 전통 은행의 디지털 전환 |",
+      "processed": true
+    },
+    {
+      "uuid": "episode_4486784158fe42de",
+      "type": "text",
+      "data": "vs Mercado Pago의 신용카드 점유율 경쟁 가속, 전통 은행의 디지털 전환 |\n\n**Thesis Connection**: 경쟁 구조는 투자 아이디어를 **조건부로 지지**한다. Nu의 경쟁 우위(CAC 1/5, 효율성 19.9%, AI 언더라이팅)는 현재 명확하다. 그러나 Mercado Pago가 **유일한 실질적 위협**이다 — 전자상거래 생태계라는 고유한 유통 채널을 보유하고 있으며, 신용카드 성장분의 36%를 Nu와 양분하고 있다. Mercado Pago의 소비자 신용 마진 46% (Nu 19%)는 잠재적으로 더 공격적인 가격 경쟁이 가능함을 의미한다. 다만 Mercado Pago의 net financial margin이 음수(-6~7%)인 것은 아직 대출 포트폴리오 품질 관리에 어려움을 겪고 있다는 증거이며, 이는 Nu의 AI 언더라이팅 우위(Idea 2)가 여신 영역에서 실질적 차별화를 제공하고 있음을 방증한다.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_e3d458217bd941bc",
+      "type": "text",
+      "data": "언더라이팅 우위(Idea 2)가 여신 영역에서 실질적 차별화를 제공하고 있음을 방증한다.\n\n구매자 교섭력이 \"Medium-High\"인 것은 **fee income 비중 하락의 산업적 맥락**을 제공한다 — 예금 유치 경쟁(CDI 105-120%)이 치열해지면서, 고객을 잡아두기 위해 여신(이자수익) 확대에 의존하게 되는 구조다. 이는 Nu만의 문제가 아닌 산업 전체의 구조적 현상.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_e7c05aa6164948e8",
+      "type": "text",
+      "data": "익) 확대에 의존하게 되는 구조다. 이는 Nu만의 문제가 아닌 산업 전체의 구조적 현상.\n\n---\n\n### Section 3: Structural Growth (LIGHT)\n\n#### 3A. TAM & 잔여 성장 여력\n\n| 시장 | 인구 | 은행 계좌 보유율 | Unbanked | 디지털 뱅킹 침투 | 잔여 기회 |\n|------|-----|-------------|---------|-------------|---------|\n| **브라질** | 215M (성인 ~170M) | ~95%+ (Pix 효과) | 34-45M (정의 따라 상이) | Nu 62% 성인 침투 | **깊이 성장(ARPAC)** 중심. 신규 고객은 affluent/super core 확장 |\n| **멕시코** | 130M (성인 ~95M) | ~60-65% | ~35-40M | Nu 14M (15% 침투) | **넓이+깊이** 모두 가능.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_5da27c7e493d4823",
+      "type": "text",
+      "data": "5% | ~35-40M | Nu 14M (15% 침투) | **넓이+깊이** 모두 가능. 은행 라이센스가 촉매 |\n| **콜롬비아** | 52M (성인 ~38M) | ~55-60% | ~15-18M | Nu 3.4M (~9% 침투) | **초기 단계**. 구독형 카드로 진입 가속 |\n| **미국 히스패닉** | 64M (성인 ~48M) | ~80%+ 전체, unbanked 1,900만+ | — | 미진출 | **비연속적 기회**. OCC 승인 후 탐색 단계 |\n\n**Bottom-Up TAM Cross-Check:**\n\n중남미 3국 총 addressable 성인 인구 ~300M. 디지털 뱅킹 침투율이 70%에 도달한다고 가정하면, TAM은 ~210M 고객. Nu의 현재 131M은 TAM의 62%. 그러나 **수익 TAM**은 고객 수가 아닌 ARPAC × 고객 수로 계산해야 한다:",
+      "processed": true
+    },
+    {
+      "uuid": "episode_ad773faadfc3470c",
+      "type": "text",
+      "data": "그러나 **수익 TAM**은 고객 수가 아닌 ARPAC × 고객 수로 계산해야 한다:\n\n- 현재 매출: $16.3B (131M × $15 ARPAC × 12개월 ≈ $23.6B → 활성 고객 기준으로 조정)\n- ARPAC $22-25 달성 시: $23.6B → $34-40B (현재 대비 +50-70%)\n- 멕시코/콜롬비아 성숙 시: 추가 $5-8B\n- **Revenue TAM**: $40-50B (현재 $16.3B 대비 2.5-3x 여력)\n\n#### 3B. S-Curve 위치",
+      "processed": true
+    },
+    {
+      "uuid": "episode_91856beb7517482e",
+      "type": "text",
+      "data": "0B (현재 $16.3B 대비 2.5-3x 여력)\n\n#### 3B. S-Curve 위치\n\n| 시장 | S-Curve 위치 | 연간 성장률 | 함의 |\n|------|-----------|-----------|-----|\n| 브라질 | **Late Growth → Early Maturity 전환 구간** | 고객 +12%, 매출 +35-40% | 고객 성장 둔화 시작, 수익화 가속 |\n| 멕시코 | **Early Growth** | 고객 >50%, 매출 >100% | 고속 성장 구간 진입 |\n| 콜롬비아 | **Introduction → Early Growth** | 고객 >100% | 최초기 |\n| 산업 전체 | **Growth 중기** | CAGR 15-20% | 2028-2030년 Maturity 진입 예상 |",
+      "processed": true
+    },
+    {
+      "uuid": "episode_5a7bdde951b342f8",
+      "type": "text",
+      "data": "중기** | CAGR 15-20% | 2028-2030년 Maturity 진입 예상 |\n\n**Thesis Connection**: 성장 구조는 투자 아이디어를 **지지**한다. 브라질이 Late Growth로 전환 중이지만, 이는 \"고객 수 성장의 S-curve\"이지 \"수익 성장의 S-curve\"가 아니다. ARPAC 심화($15→$22-25)라는 두 번째 S-curve가 이제 본격화되고 있으며, 멕시코의 Early Growth가 세 번째 엔진으로 점화되고 있다. Revenue TAM $40-50B 대비 현재 $16.3B는 여전히 충분한 활주로를 의미한다.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_b31ec1e33b654f60",
+      "type": "text",
+      "data": "enue TAM $40-50B 대비 현재 $16.3B는 여전히 충분한 활주로를 의미한다.\n\n---\n\n## CHECKPOINT\n\n### Thesis Verification Status\n\n| # | 산업 질문 | 답변 상태 | 핵심 발견 |\n|---|---------|---------|---------|\n| IQ1 | Profit pool 구조적 이전? | ✅ **답변됨** | **구조적 이전 확인.** 신용카드 성장분 36%를 디지털 양분. 비용 구조 격차(CAC 5-6x)는 좁혀지기 어려움 |\n| IQ2 | 잔여 TAM? | ✅ **답변됨** | Revenue TAM $40-50B vs 현재 $16.3B. 고객 TAM보다 수익 TAM이 핵심. ARPAC 심화 + 멕시코가 성장 엔진 |\n| IQ3 | 경쟁 과잉 투자? | ⏳ **Phase 2에서 답변** | Mercado Pago가 유일한 실질 위협.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_2bd3795e25364005",
+      "type": "text",
+      "data": "? | ⏳ **Phase 2에서 답변** | Mercado Pago가 유일한 실질 위협. Capital Cycle 분석 필요 |\n| IQ4 | AI 모트 지속성? | ⏳ **Phase 2에서 답변** | AI 언더라이팅 범용화 추세 확인 필요 |\n| IQ5 | Selic 영향? | ⏳ **Phase 2에서 답변** | 275bps 인하 전망. Float Income 영향 분석 필요 |\n\n### Key Findings (Phase 1)",
+      "processed": true
+    },
+    {
+      "uuid": "episode_e44af6fe8f194431",
+      "type": "text",
+      "data": "at Income 영향 분석 필요 |\n\n### Key Findings (Phase 1)\n\n1. **Profit pool migration은 구조적** — 전통 은행의 지점 비용 구조(CAC $91-115 vs Nu $19)는 정치/노조 이유로 단기 축소 불가. 이익 이전이 가속될 구조적 조건이 유지됨\n2. **Mercado Pago가 유일한 실질 위협** — 전자상거래 유통 채널이라는 고유 자산 보유. 그러나 net financial margin이 음수인 것은 여신 품질 관리에서 Nu 열세\n3. **브라질 고객 성장 S-curve는 Late Growth이나, 수익 S-curve는 아직 Growth 중기** — ARPAC $15→$22-25 여력이 핵심\n4. **Fee income 하락은 산업적 맥락이 있음** — 예금 유치 경쟁(CDI 105-120%) + Pix의 카드 수수료 잠식으로, 산업 전체가 여신(이자수익)에 의존하는 구조. Nu만의 문제가 아님\n5.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_4a297b6015a84361",
+      "type": "text",
+      "data": "수료 잠식으로, 산업 전체가 여신(이자수익)에 의존하는 구조. Nu만의 문제가 아님\n5. **Revenue TAM $40-50B** — 현재 $16.3B 대비 2.5-3x 여력. 멕시코 Early Growth가 핵심 변수\n\n### Phase 2 방향\n\n- **Section 4 (Capital Cycle)**: DEEP — 핀테크 투자 사이클과 공급 과잉 여부\n- **Section 5 (Technology Disruption)**: DEEP — AI 모트의 산업 수준 지속성\n- **Section 6 (External Environment)**: LIGHT — Selic 하락 + Pix/Drex 규제\n\n---\n\n## Phase 2: Dynamics & Disruption\n\n### Section 4: Capital Cycle ★ DEEP ★\n\n#### 4A. 현재 사이클 위치\n\nHoward Marks 프레임워크 적용:",
+      "processed": true
+    },
+    {
+      "uuid": "episode_284d1d5417b84b42",
+      "type": "text",
+      "data": "EP ★\n\n#### 4A. 현재 사이클 위치\n\nHoward Marks 프레임워크 적용:\n\n```\nShortage → Excess Profits → Over-investment → Oversupply → Restructuring → Under-investment → Shortage\n↑\n현재 위치 (Late Over-investment → Early Oversupply 전환)\n```\n\n**근거:**\n\n1. **VC 투자 규모**: 중남미 VC 투자 2025년 $4.13B (+13.8% YoY). 핀테크가 61% 차지 ($2.5B+). 2021-2023년 106개 VC 펀드가 레이징했으며, 이 자금의 집행이 아직 진행 중.\n\n2. **후기 단계 집중**: 후기 투자 +176% YoY, 평균 티켓 $5.2M→$6.1M. 이는 자본이 **검증된 승자에게 집중**되고 있음을 의미 — 초기 핀테크에 대한 \"spray and pray\"가 아닌, 수익성 있는 플레이어에 대한 집중 투자.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_1b8928f17c714d52",
+      "type": "text",
+      "data": "에 대한 \"spray and pray\"가 아닌, 수익성 있는 플레이어에 대한 집중 투자.\n\n3. **Q4 2025 급감**: 핀테크 Q4 2025 투자 $400.8M — Q4 2024 $886.2M 대비 **-55%**. 연말 모멘텀 냉각은 과잉 투자 피크가 지났음을 시사.\n\n4. **IPO/M&A 대기**: 투자자들이 \"exit\"을 요구하기 시작. 이는 후기 사이클의 전형적 신호.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_5fa6d9467248434c",
+      "type": "text",
+      "data": "A 대기**: 투자자들이 \"exit\"을 요구하기 시작. 이는 후기 사이클의 전형적 신호.\n\n#### 4B. 공급-수요 균형\n\n| 지표 | 현황 | 방향 | 시사점 |\n|-----|-----|-----|-------|\n| 디지털 은행 수 (브라질) | 30+ (활성) | 감소 중 (통합) | 약자 퇴출 진행 중 |\n| 고객 침투율 (브라질) | ~95%+ 계좌, 62% Nu 단독 | 포화 접근 | 신규 고객 획득 경쟁 비용 상승 |\n| 예금 유치 경쟁 | CDI 105-120% 제공 | 심화 | 자금 조달 비용 상승 압력 |\n| 신용카드 신규 발급 | Nu+MeLi 36% 점유 | 집중 가속 | 과점 형성 초기 |\n\n#### 4C. Capital Cycle 판정\n\n**\"Late Over-investment 구간이나, 전형적 Oversupply와 다른 양상\"**",
+      "processed": true
+    },
+    {
+      "uuid": "episode_2b84a3358727450b",
+      "type": "text",
+      "data": "e Over-investment 구간이나, 전형적 Oversupply와 다른 양상\"**\n\n일반적 Capital Cycle에서 over-investment는 가격 하락과 마진 압축으로 이어진다. 그러나 중남미 디지털 뱅킹에서는:\n\n1. **수요 성장률(15-20% CAGR)이 공급 확대를 아직 흡수 중** — 전형적 commodity 산업과 달리, 금융 서비스의 TAM 자체가 확장 중 (underbanked 편입, ARPAC 심화)\n2. **통합(consolidation)이 이미 진행 중** — 소규모 핀테크의 VC 펀딩 급감(Q4 -55%), 후기 단계 집중, 생존율 하락. 이는 과잉 공급이 조기에 정리되고 있다는 신호\n3. **규모의 경제가 극단적** — 디지털 뱅킹의 고정비 구조(AI 모델, 인프라)는 규모가 클수록 비용 우위가 강화. Nu(131M)와 소규모 핀테크(5-10M)의 단위 비용 격차가 확대 → 자연적 통합 압력\n4.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_be9274ae37014bec",
+      "type": "text",
+      "data": "31M)와 소규모 핀테크(5-10M)의 단위 비용 격차가 확대 → 자연적 통합 압력\n4. **예금 경쟁은 비용 상승 요인** — CDI 105-120% 예금 금리 경쟁은 모든 참여자의 자금 조달 비용을 높이며, 이는 여신 마진(NIM)을 압축하는 방향으로 작용\n\n**Historical Analog**: 미국 2010-2015년 Neobank 출현기와 유사하나, 브라질의 경우 (1) unbanked 비율이 훨씬 높아 TAM 확장이 동시에 진행, (2) Pix라는 공공 결제 인프라가 디지털 전환을 가속화했다는 차이. 미국에서는 Chime/Varo 등이 초기 성장 후 수익성 문제에 봉착했으나, Nu는 이미 ROE 33%를 달성하여 이 함정을 통과.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_69097fbdf54d42e2",
+      "type": "text",
+      "data": "장 후 수익성 문제에 봉착했으나, Nu는 이미 ROE 33%를 달성하여 이 함정을 통과.\n\n**Thesis Connection**: Capital Cycle은 투자 아이디어를 **지지**한다. 과잉 투자의 피크가 지나가고 있으며(Q4 VC -55%), 자본이 검증된 승자에게 집중되는 단계에 진입했다. Nu는 131M 고객 + ROE 33% + 효율성 19.9%로 **자본 사이클의 명백한 승자 포지션**에 있다. 소규모 핀테크의 퇴출이 가속되면 오히려 Nu의 시장 점유율이 추가 확대될 수 있다. 리스크는 Mercado Pago — 모회사 Mercado Libre의 수익성($MELI 시가총액 $100B+)이 공격적 보조금 투자를 지속할 수 있는 재원을 제공한다.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_0f528d953ff24401",
+      "type": "text",
+      "data": "MELI 시가총액 $100B+)이 공격적 보조금 투자를 지속할 수 있는 재원을 제공한다.\n\n---\n\n### Section 5: Technology Disruption Radar ★ DEEP ★\n\n#### 5A. 핵심 기술 3가지\n\n| 기술 | 성숙도 | 수혜자 | 위협 대상 | Sustaining vs Disruptive | 투자 함의 |\n|-----|-------|-------|---------|------------------------|---------|\n| **AI/ML 언더라이팅** | **Growth** (1-3년) | 데이터 풍부한 대형 플레이어 (Nu, MeLi) | 전통 신용평가 기관, 소규모 핀테크 | **Sustaining** — 규모 있는 인컴번트에 유리 | IQ4 핵심: winner-take-most 형성 |\n| **Drex (디지털 헤알)** | **Pilot** (3-5년) | 규제 라이센스 보유 금융기관 | 비인가 결제/암호화폐 서비스 | **Sustai",
+      "processed": true
+    },
+    {
+      "uuid": "episode_68ae30fc54f64fe8",
+      "type": "text",
+      "data": "5년) | 규제 라이센스 보유 금융기관 | 비인가 결제/암호화폐 서비스 | **Sustaining** — 기존 은행/핀테크가 참여 | 규제 준수 역량이 진입 장벽으로 강화 |\n| **Open Finance** | **Early Growth** (1-3년) | 데이터 활용 역량 높은 플레이어 | 정보 비대칭에 의존하는 전통 은행 | **Disruptive** (부분적) | 6,000만+ 동의. 데이터 민주화가 소형 플레이어에도 기회 제공 |\n\n#### 5B. AI 모트의 산업 수준 지속성 분석 (IQ4 직접 답변)\n\n**핵심 질문: AI 언더라이팅이 범용 기술이 되어 Nu의 모트가 소멸하는가?**\n\n**답변: 부분적 범용화가 진행 중이나, Nu의 모트는 \"AI 기술\" 자체가 아닌 \"AI + 데이터 + 규모\"의 결합에 있어 소멸하지 않는다.**\n\n근거:",
+      "processed": true
+    },
+    {
+      "uuid": "episode_2918b37c88d64b8d",
+      "type": "text",
+      "data": "자체가 아닌 \"AI + 데이터 + 규모\"의 결합에 있어 소멸하지 않는다.**\n\n근거:\n\n1. **AI 기술 자체는 범용화 추세** — 83%의 대출 기관이 2026년에 GenAI 예산을 확대하며, 2/3가 AI 전략을 이미 실행 중. Zest AI, Credolab 등 제3자 AI 신용평가 서비스가 확산. AI 모델 자체는 commodity화 방향.\n\n2. **그러나 학습 데이터의 격차는 좁혀지지 않는다** — Nu는 131M 고객의 **행동 데이터**(거래 패턴, 소비 습관, 앱 사용 빈도 등)를 보유. 이 데이터는 거래 건수에 비례하여 축적되며, 신규 진입자가 5-10M 고객 데이터로는 Nu의 131M 데이터셋에 기반한 모델 정확도에 도달하기 어렵다.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_8fb08a35e79a4a5a",
+      "type": "text",
+      "data": "10M 고객 데이터로는 Nu의 131M 데이터셋에 기반한 모델 정확도에 도달하기 어렵다.\n\n3. **nuFormer(자체 foundation model)의 교차 시장 이식** — 브라질에서 학습한 모델을 멕시코/콜롬비아에 적용하는 \"transfer learning\"은 다국적 운영 경험이 있는 플레이어만 가능. 이는 AI 기술의 규모의 경제.\n\n4. **NPL 데이터가 증명** — Nu의 90+ NPL 6.6% (개선 추세)는 Mercado Pago의 net financial margin 음수와 극명한 대조. AI 기술이 범용화되더라도, 실전 데이터에 기반한 모델 캘리브레이션은 시간과 규모의 함수.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_a28cd852e4f74374",
+      "type": "text",
+      "data": "I 기술이 범용화되더라도, 실전 데이터에 기반한 모델 캘리브레이션은 시간과 규모의 함수.\n\n5. **Open Finance는 양날의 검** — 6,000만+ 데이터 공유 동의가 진행 중이며, 이론적으로 소규모 플레이어에도 데이터 접근을 제공. 그러나 (1) 데이터 활용 역량(AI/ML 인프라)은 여전히 규모에 비례, (2) 과거 행동 데이터의 깊이(연도별 축적)는 Open Finance로 대체 불가.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_6920cd6fbbe44e14",
+      "type": "text",
+      "data": ", (2) 과거 행동 데이터의 깊이(연도별 축적)는 Open Finance로 대체 불가.\n\n**결론: AI 모트는 \"기술 모트\"가 아닌 \"데이터 + 규모 모트\"로 재정의해야 한다. 기술은 범용화되지만, 131M 고객 × 수년간 축적된 행동 데이터 × 다국적 이식 경험의 결합은 복제가 극히 어렵다.**\n\n**Thesis Connection**: 기술 분석은 Idea 2 (AI 모트)를 **강화**한다. AI 기술 자체의 범용화는 사실이지만, Nu의 모트는 기술이 아닌 데이터 규모에 있으며, 이는 시간과 규모가 축적될수록 강화되는 네트워크 효과의 변형이다. Mercado Pago만이 유사한 규모의 거래 데이터를 보유하나, 여신 전용 데이터의 깊이에서는 Nu가 우위.\n\nOpen Finance가 장기적으로 데이터 모트를 약화시킬 수 있는 유일한 구조적 위험이다. 그러나 3-5년 시계에서는 Nu의 우위가 유지될 것으로 판단.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_89335840b4424793",
+      "type": "text",
+      "data": "유일한 구조적 위험이다. 그러나 3-5년 시계에서는 Nu의 우위가 유지될 것으로 판단.\n\n---\n\n### Section 6: External Environment (LIGHT)\n\n#### 6A. Selic 금리 하락 사이클 (IQ5 답변)\n\n**현재 Selic 15.0% → 2026 말 전망 11.25-12.25% (275-375bps 인하)**",
+      "processed": true
+    },
+    {
+      "uuid": "episode_fce87661738f45a3",
+      "type": "text",
+      "data": "15.0% → 2026 말 전망 11.25-12.25% (275-375bps 인하)**\n\n| 시나리오 | 2026E Selic | Float Income 영향 | Nu 매출 영향 | 판단 |\n|---------|-----------|----------------|-----------|-----|\n| Base | 12.25% | -$600-800M (FY2025 $4,505M의 13-18%) | 매출 -4-5% | ⚠️ **의미 있는 역풍** |\n| Bull | 11.25% | -$800-1,000M (-18-22%) | 매출 -5-6% | ⚠️ **상당한 역풍** |\n| Bear (인하 지연) | 14.00% | -$200-300M (-4-7%) | 매출 -1-2% | ✅ 관리 가능 |",
+      "processed": true
+    },
+    {
+      "uuid": "episode_d22bb395f183445c",
+      "type": "text",
+      "data": ".00% | -$200-300M (-4-7%) | 매출 -1-2% | ✅ 관리 가능 |\n\n**그러나 상쇄 요인이 존재:**\n1. Selic 하락 → 경기 회복 → 대출 수요 증가 → Credit Income 확대\n2. 브라질 신용 성장 전망: 2026년 +8.0% (개인 +8.3%, 기업 +7.4%)\n3. Nu의 Credit Portfolio 성장(+40% YoY)이 Float Income 감소를 상쇄할 수 있는 규모\n4. Selic 하락은 NPL 개선에도 기여 → 충당금 비용 절감\n\n**Net Impact 추정**: Float Income 역풍을 Credit Income 성장이 부분적으로 상쇄. 순 영향은 매출 성장률 기준 -3~5%p 감속 효과로 추정. FY2025 +45% → FY2026 +30-35%로의 감속에 Selic 인하가 기여할 것.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_7befc73084964beb",
+      "type": "text",
+      "data": "2025 +45% → FY2026 +30-35%로의 감속에 Selic 인하가 기여할 것.\n\n#### 6B. 규제 환경 — 핵심 변화만\n\n| 규제 | 시행 시점 | 영향 | Nu에 유/불리 |\n|-----|---------|-----|-----------|\n| **Pix 비인가 업체 퇴출** | 2026.01-05 | 비인가 결제 기관 퇴출 → 인가 기관 수혜 | ✅ **유리** — Nu는 인가 기관 |\n| **Drex 파일럿** | 2026-2027 | 프로그래머블 머니, RWA 토큰화 | ✅ **유리** — 기술 역량 보유 기관에 기회 |\n| **브라질 법인세율 40%→45%** | 2025 시행 | 순이익 -$100-150M 영향 | ❌ **불리** — 산업 전체 영향 |\n| **FGTS 규제 변경** | 2025.11~ | FGTS 대출 실행 -50-60% | ❌ **불리** — 단기 대출 성장 제약 |\n| **Open Finance 확대** | 진행 중 | 6,000만+ 동의",
+      "processed": true
+    },
+    {
+      "uuid": "episode_249de48cebfd4199",
+      "type": "text",
+      "data": "성장 제약 |\n| **Open Finance 확대** | 진행 중 | 6,000만+ 동의. 데이터 민주화 | ⚠️ **양날의 검** |\n\n**Thesis Connection**: 외부 환경은 **혼합**이다. Selic 인하는 Float Income(27.6%)에 직접적 역풍이나, 대출 수요 확대로 부분 상쇄. 규제 환경은 전반적으로 인가된 대형 기관(Nu)에 유리한 방향으로 진화 중. Pix 비인가 퇴출과 Drex는 규제 준수 역량이 있는 플레이어에게 기회. 브라질 세율 인상은 산업 전체 영향이므로 상대적 불이익은 없음.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_9b28ea05b65e4953",
+      "type": "text",
+      "data": "있는 플레이어에게 기회. 브라질 세율 인상은 산업 전체 영향이므로 상대적 불이익은 없음.\n\n---\n\n## Phase 3: Synthesis & Verdict\n\n### Cross-Section Consistency Check\n\n| # | Check | Result | Detail |\n|---|-------|--------|--------|\n| **1** | Growth ↔ Capital Cycle | ✅ 일관 | Growth CAGR 15-20% + Capital 후기 투자 집중 → 수요가 공급을 아직 흡수 중. 소규모 핀테크 퇴출이 과잉 공급 조기 해소 |\n| **2** | Competitive ↔ Profit Pool | ✅ 일관 | 여신(Stage 3) profit 집중 + Nu/MeLi 36% 점유 → 과점 형성 초기.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_4b6eedfafcb3484c",
+      "type": "text",
+      "data": "신(Stage 3) profit 집중 + Nu/MeLi 36% 점유 → 과점 형성 초기. 이익과 점유율 방향 일치 |\n| **3** | Disruption ↔ Moat | ⚠️ 부분 불일치 | AI 기술은 범용화 추세이나, 데이터+규모 모트가 이를 보상. **Open Finance가 3-5년 내 데이터 모트를 약화시킬 수 있는 유일한 구조적 리스크** |\n| **4** | All ↔ Thesis Questions | ✅ 대부분 답변 | IQ1✅ IQ2✅ IQ3✅ IQ4✅ IQ5✅. 모든 질문 답변 완료 |\n\n### Investment Attractiveness Grade",
+      "processed": true
+    },
+    {
+      "uuid": "episode_6d84d07d27fd405d",
+      "type": "text",
+      "data": "질문 답변 완료 |\n\n### Investment Attractiveness Grade\n\n| Category | Grade | Key Factor |\n|----------|-------|-----------|\n| Growth Trajectory | **A-** | Revenue TAM $40-50B vs 현재 $16.3B. 멕시코 Early Growth. 브라질 ARPAC 심화 |\n| Competitive Structure | **B+** | Nu 명확한 리더이나 Mercado Pago의 위협 존재. 구매자 교섭력 Medium-High |\n| Capital Cycle Position | **A** | 후기 투자→통합 단계 진입. Nu는 자본 사이클 승자 포지션 |\n| Disruption Risk | **B** | AI 범용화 추세이나 데이터 모트로 보호.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_236b7bf577d04fa5",
+      "type": "text",
+      "data": "Disruption Risk | **B** | AI 범용화 추세이나 데이터 모트로 보호. Open Finance가 장기 리스크 |\n| External Environment | **B-** | Selic 인하 역풍, 규제는 대형 인가 기관에 유리 |\n| **Overall Attractiveness** | **B+** | **매력적 산업 + 명확한 산업 리더 = 투자 아이디어 지지** |\n\n### Investment Thesis Verdict\n\n#### 1. 산업 데이터가 투자 아이디어를 지지하는 증거",
+      "processed": true
+    },
+    {
+      "uuid": "episode_a6da4a76e79a4998",
+      "type": "text",
+      "data": "Thesis Verdict\n\n#### 1. 산업 데이터가 투자 아이디어를 지지하는 증거\n\n- **Profit pool의 구조적 이전**: 신용카드 성장분 36%가 디지털 플레이어로 이전. 비용 구조 격차(CAC 5-6x)는 전통 은행의 지점 네트워크 문제로 좁혀지기 어려움. 이는 Idea 1(ARPAC 심화)의 산업적 기반을 확인\n- **Capital Cycle 승자 포지션**: Q4 2025 VC 투자 -55% 급감은 과잉 투자 피크 지남을 시사. 자본이 검증된 승자(Nu)에 집중. 소규모 핀테크 퇴출은 Nu의 점유율 추가 확대 기회\n- **AI 모트는 데이터+규모의 모트**: 131M 고객 행동 데이터 + nuFormer 교차 시장 이식은 복제 불가. Mercado Pago의 음수 financial margin이 Nu의 AI 우위를 방증\n\n#### 2. 산업 데이터가 투자 아이디어에 의문을 제기하는 증거",
+      "processed": true
+    },
+    {
+      "uuid": "episode_adc0bab6c55f4f33",
+      "type": "text",
+      "data": "AI 우위를 방증\n\n#### 2. 산업 데이터가 투자 아이디어에 의문을 제기하는 증거\n\n- **Fee income 하락은 산업적 현상이지만 해결은 기업 수준의 문제**: 예금 경쟁(CDI 105-120%)과 Pix의 카드 수수료 잠식이 산업 전체를 여신 의존으로 만들고 있음. 그러나 Nu의 fee income 14.3%가 산업 평균보다 낮은 것은 크로스셀 미성숙의 증거\n- **Selic 인하 275-375bps는 Float Income에 실질적 역풍**: $600M-1B 영향은 FY2025 순이익 $2.9B의 20-34%. Credit Income 성장으로 상쇄 가능하나, 성장률 감속은 불가피\n- **Mercado Pago의 구조적 위협**: 전자상거래 생태계(고유 유통 채널) + 소비자 신용 마진 46%는 장기적으로 여신 영역에서 가격 경쟁 압력을 가할 수 있음\n\n#### 3. 기존 정성 분석 수정 필요 사항",
+      "processed": true
+    },
+    {
+      "uuid": "episode_e04bfffb14fc47b7",
+      "type": "text",
+      "data": "역에서 가격 경쟁 압력을 가할 수 있음\n\n#### 3. 기존 정성 분석 수정 필요 사항\n\n| 항목 | 기존 판단 | 산업 분석 후 수정 | 영향 |\n|-----|---------|-------------|-----|\n| B1 Moat Assessment (Competitive Position A) | 비용 우위 7.7x가 핵심 모트 | **유지하되 Mercado Pago 위협 등급 상향** — 신용카드 성장분 36% 양분은 기존 보고서에서 충분히 반영되지 않은 경쟁 강도 | Section 4 Roundtable Issue 업데이트 |\n| Fee income 전망 (16-18% 목표) | 크로스셀로 회복 가능 | **산업 구조적으로 여신 의존이 심화**되고 있어, 16-18% 회복이 산업 역풍 속에서 달성되어야 하는 더 어려운 목표임을 인식 | Scenario B 전제 하향 검토 |\n| Selic 민감도 (FVQ5) | Float 27.6% 민감도 인식 | **275-375bps 인하",
+      "processed": true
+    },
+    {
+      "uuid": "episode_55910a1ec0694c6f",
+      "type": "text",
+      "data": "민감도 (FVQ5) | Float 27.6% 민감도 인식 | **275-375bps 인하가 구체화**되어 정량적 영향 반영 필요. Revenue growth -3~5%p 감속 효과 | DCF Y1-Y2 growth 가정 조정 |\n\n#### 4. 가장 중요한 미해결 질문\n\n**\"Mercado Pago가 여신(lending) 영역에서 net financial margin을 양수로 전환할 수 있는가?\"**\n\n이것이 답해지면 Nu의 경쟁 우위의 지속 기간이 결정된다. Mercado Pago의 margin이 양수로 전환되면, 전자상거래 유통 채널 + 양수 마진이라는 강력한 조합이 형성되어 Nu의 여신 점유율 성장이 제약될 수 있다. 반대로, Mercado Pago가 계속 음수 margin이면, Nu의 AI 언더라이팅 우위가 실질적 경쟁 장벽임이 재확인된다.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_c958d68dcac24228",
+      "type": "text",
+      "data": "음수 margin이면, Nu의 AI 언더라이팅 우위가 실질적 경쟁 장벽임이 재확인된다.\n\n#### 5. 12-24개월 모니터링 지표\n\n| 지표 | 현재 값 | 12개월 목표 | 24개월 목표 | 트리거 조건 |\n|-----|--------|-----------|-----------|-----------|\n| Nu 신용카드 성장분 점유율 | ~18% (Nu 단독) | 20%+ | 22%+ | 18% 미만 3분기 연속 시 경쟁 역학 악화 |\n| Mercado Pago net financial margin | -6~7% | -3~0% | 양수 전환 여부 | 양수 전환 시 Nu 모트 재평가 |\n| 산업 VC 투자 (분기) | $400M (Q4 2025) | $300-500M | 안정화 | $1B+ 급등 시 과잉 투자 재개 |\n| 브라질 디지털 뱅킹 고객 순증 | 둔화 중 | 안정화 | 성숙기 진입 | QoQ 순증 0 이하 시 포화 확정 |\n| Selic 실효 금리 | 15.0% | 12-",
+      "processed": true
+    },
+    {
+      "uuid": "episode_6ede1ca6d1b04d69",
+      "type": "text",
+      "data": "QoQ 순증 0 이하 시 포화 확정 |\n| Selic 실효 금리 | 15.0% | 12-13% | 10-11% | 예상보다 빠른 인하 시 Float Income 영향 확대 |\n| Open Finance 동의 건수 | 6,000만+ | 8,000만+ | 1억+ | 빠른 확산 시 데이터 모트 약화 리스크 상승 |\n\n---\n\n## Scuttlebutt Deep Dive\n\n### AI-Accessible 소스 리서치 결과",
+      "processed": true
+    },
+    {
+      "uuid": "episode_4a0f14e5858a49e3",
+      "type": "text",
+      "data": "uttlebutt Deep Dive\n\n### AI-Accessible 소스 리서치 결과\n\n#### Finding 1: Mercado Pago 신용 포트폴리오 $11B (Q3 2025, +83% YoY)\n- **Source**: MercadoLibre Q3 2025 Earnings, BusinessWire\n- **Signal**: MeLi의 신용카드 포트폴리오가 +118% YoY로 $4B 도달. 전체 신용 포트폴리오 $11B. Nu의 $32.7B 대비 1/3 규모이나, 성장 속도가 2배\n- **Investment Implication**: Mercado Pago가 여신 영역에서 Nu를 추격하는 속도가 예상보다 빠름. 다만 MeLi의 15-90 NPL 6.8% (Nu 4.1%)로 신용 품질 격차가 여전히 크고, 운영 마진 9.8%로 하락 — 공격적 성장이 수익성을 압박 중\n- **Confidence**: High (1차 소스: 어닝 리포트)",
+      "processed": true
+    },
+    {
+      "uuid": "episode_02efb23afe3c4f68",
+      "type": "text",
+      "data": "수익성을 압박 중\n- **Confidence**: High (1차 소스: 어닝 리포트)\n\n#### Finding 2: UBS, Nu를 Neutral→Buy로 상향 ($17.60 PT)\n- **Source**: StocksToTrade, TimothySykes\n- **Signal**: UBS가 2023년 대비 이익 2배 성장을 근거로 매력적 밸류에이션 판단. Morgan Stanley PT $21 유지. 16명 애널리스트 컨센서스 PT $20.25\n- **Investment Implication**: 현재 $14.67 대비 컨센서스 +38% 상방. Sell-side가 산업 리더로서의 Nu 포지션을 재확인\n- **Confidence**: High",
+      "processed": true
+    },
+    {
+      "uuid": "episode_025b582a06c247a9",
+      "type": "text",
+      "data": "ide가 산업 리더로서의 Nu 포지션을 재확인\n- **Confidence**: High\n\n#### Finding 3: Nu 주가 YTD -12.73% — 펀더멘털과 주가의 괴리\n- **Source**: 247WallSt, StockAnalysis\n- **Signal**: FY2025 실적이 역대 최고임에도 주가 하락. 시장은 (1) EM 디스카운트 (BRL 약세), (2) 효율성 비율 상승 예고, (3) Selic 인하의 Float Income 영향을 반영\n- **Investment Implication**: 산업 분석 결과와 일치 — 펀더멘털은 강하나, 매크로/금리 우려가 할인 요인. 이는 \"시장 인식 Gap\" (Qualitative Report Q1)이 아직 닫히지 않았음을 의미\n- **Confidence**: High",
+      "processed": true
+    },
+    {
+      "uuid": "episode_f2c477e191774269",
+      "type": "text",
+      "data": "eport Q1)이 아직 닫히지 않았음을 의미\n- **Confidence**: High\n\n#### Finding 4: Reddit Sentiment Score 68-70 (Bullish)\n- **Source**: StocksToTrade (Reddit sentiment tracker)\n- **Signal**: 리테일 투자자 심리는 긍정적. \"가격 vs 비즈니스 퍼포먼스 갭\"이 활발히 토론 중\n- **Investment Implication**: 리테일 센티먼트가 기관 뷰와 aligned — 실적은 인정하나 주가 할인이 기회인지 함정인지 debate\n- **Confidence**: Medium (간접 소스)",
+      "processed": true
+    },
+    {
+      "uuid": "episode_3a85ebe43fa24503",
+      "type": "text",
+      "data": "회인지 함정인지 debate\n- **Confidence**: Medium (간접 소스)\n\n#### Finding 5: \"$100B Pivot\" 내러티브 부상\n- **Source**: 247WallSt\n- **Signal**: 일부 투자자/미디어가 Nu의 미국 진출 + 글로벌 확장을 \"$100B 밸류에이션\" 스토리로 프레이밍. 현재 $71B\n- **Investment Implication**: 미국 진출(Idea 3)이 멀티플 리레이팅의 촉매가 될 수 있다는 시장 기대 존재. 다만 \"de minimis\" 수준의 현재 투자로는 단기 실현 어려움\n- **Confidence**: Medium\n\n### 투자자가 직접 검증해야 할 5가지",
+      "processed": true
+    },
+    {
+      "uuid": "episode_45d81f6e7a1f4c7c",
+      "type": "text",
+      "data": "- **Confidence**: Medium\n\n### 투자자가 직접 검증해야 할 5가지\n\n1. **브라질 현지 Nu 앱 vs Mercado Pago 앱 UX 비교**: 직접 양쪽 앱을 설치하고, 계좌 개설→카드 발급→소액 대출 프로세스를 경험. 고객 전환 비용(switching cost)의 실제 수준을 체감\n2. **Nu/MeLi 고객 2-3명 인터뷰**: 브라질 현지인에게 \"왜 Nu를 쓰는가?\", \"Mercado Pago의 CDI 120%에 예금을 옮길 의향이 있는가?\" 직접 질문. 고객 충성도의 실체 파악\n3. **멕시코 Nu 사용자 경험**: 멕시코 현지에서 Nu 카드가 실제로 1위 발급인지, 고객 경험이 브라질과 동등한지 확인. \"이식성(portability)\" 가설의 현장 검증\n4. **Itaú One 앱 리뷰**: Itaú의 디지털 전환이 실제로 어느 수준인지 체험. 전통 은행의 디지털 전환이 Nu의 위협이 될 수 있는 수준인지 판단\n5.",
+      "processed": true
+    },
+    {
+      "uuid": "episode_36d93bc1f8404db5",
+      "type": "text",
+      "data": "수준인지 체험. 전통 은행의 디지털 전환이 Nu의 위협이 될 수 있는 수준인지 판단\n5. **Open Finance 실제 활용 사례 조사**: 브라질에서 Open Finance를 활용한 소규모 핀테크가 실제로 등장하고 있는지, 데이터 접근이 경쟁력 변화를 만들고 있는지 확인\n\n---\n\n## Phase 4: Self-Review",
+      "processed": true
+    },
+    {
+      "uuid": "episode_c82dd9e453194c9d",
+      "type": "text",
+      "data": "경쟁력 변화를 만들고 있는지 확인\n\n---\n\n## Phase 4: Self-Review\n\n| # | Check | Standard | Result |\n|---|-------|----------|--------|\n| R1 | Cross-section consistency | 5개 교차 검증 통과 | ✅ 4/5 통과, 1개 부분 불일치(Disruption↔Moat) 문서화됨 |\n| R2 | Key figures re-verified | 5개 이상 핵심 수치 웹서치 재확인 | ✅ 시장 규모, 고객 수, VC 투자, Selic 전망, MeLi 실적 모두 재확인 |\n| R3 | Thesis connection complete | 5개 산업 질문 모두 답변 | ✅ IQ1-IQ5 모두 답변 완료 |\n| R4 | No boilerplate | 프레임워크 설명 없음 | ✅ Porter's, S-curve 정의 없이 바로 적용 |\n| R5 | Qualitative report consistency |",
+      "processed": true
+    },
+    {
+      "uuid": "episode_4633e4f789a041c8",
+      "type": "text",
+      "data": "없이 바로 적용 |\n| R5 | Qualitative report consistency | 산업 가정 일치 또는 차이 설명 | ✅ 3개 수정 필요 사항 문서화 |\n| R6 | Scuttlebutt executed | X/Reddit/커뮤니티 검색 실행 | ✅ 5개 finding + 5개 현장 검증 항목 |\n| R7 | Korean output quality | 자연스러운 한국어, 영어 금융 표기 | ✅ |\n\n---\n\n_분석 완료: 2026-03-24_\n\n---\n\n## 관련 분석",
+      "processed": true
+    },
+    {
+      "uuid": "episode_31daa88b2c144385",
+      "type": "text",
+      "data": "기 | ✅ |\n\n---\n\n_분석 완료: 2026-03-24_\n\n---\n\n## 관련 분석\n\n- [[NU_company_qualitative|NU 기업 정성 분석]]\n- [[NU_financial_statements|NU 재무제표 분석]]\n- [[NU_management_culture|NU 경영진·문화 분석]]\n- [[NU_dcf_valuation|NU DCF 밸류에이션]]\n- [[NU_bias_review|NU 편향 리뷰]]\n- [[NU_quant_signal|NU 퀀트 시그널]]\n- [[NU_2025-Q4|NU 2025-Q4 어닝콜]]\n- [[CROSS_VALIDATION_SUMMARY|교차 검증 요약]]\n- [[NU_company_qualitative_old|NU_company_qualitative_old]]\n- [[NU_cross_validation|NU 교차 검증]]\n- [[NU_unverified|NU 미검증 항목]]\n- [[portfolio|포트폴리오 현황]]\n- [[por",
+      "processed": true
+    },
+    {
+      "uuid": "episode_99026a816fc844ee",
+      "type": "text",
+      "data": "ified|NU 미검증 항목]]\n- [[portfolio|포트폴리오 현황]]\n- [[portfolio_position_sizing|포지션 최적화]]\n\n<!-- [2026-03-29] report-propagator: 정성분석 등급 B+(84.8%)→B(79.0%) 전파 -->\n\n=== catalyst.txt ===\n🚨 Newswire: {ticker} just reported quarterly results. Revenue and EPS both came in below consensus. Management cut full-year guidance citing higher credit costs and slowing active-customer growth. Shares trading about 9% lower after-hours.",
+      "processed": true
+    }
+  ],
+  "nodes": [
+    {
+      "uuid": "node_a5a52924a5214790",
+      "name": "FY2025",
+      "labels": [
+        "Entity",
+        "RetailInvestor"
+      ],
+      "summary": "> **분석일**: 2026년 3월 24일 | **실적 발표**: 2025년 Q4 (FY2025) | **어닝콜 일자**: 2026년 2월 25일",
+      "attributes": {
+        "source": "local_qmd",
+        "episode_id": "episode_80a2b68935e14b43"
+      }
+    },
+    {
+      "uuid": "node_3a6076c3ea754a30",
+      "name": "CEO",
+      "labels": [
+        "Entity",
+        "FundManager"
+      ],
+      "summary": "> **참석 경영진**: David Vélez (Founder, CEO & Chairman), Guilherme Lago (CFO), Guilherme Souto (IR)",
+      "attributes": {
+        "source": "local_qmd",
+        "episode_id": "episode_80a2b68935e14b43"
+      }
+    },
+    {
+      "uuid": "node_ee670ff18bed43d7",
+      "name": "=== NU_2025",
+      "labels": [
+        "Entity",
+        "InvestmentBank"
+      ],
+      "summary": "=== NU_2025-Q4.md ===",
+      "attributes": {
+        "source": "local_qmd",
+        "episode_id": "episode_80a2b68935e14b43"
+      }
+    },
+    {
+      "uuid": "node_902ed63a68994f6b",
+      "name": "NU_Qualitative_Analysis_2026",
+      "labels": [
+        "Entity",
+        "InvestmentAnalyst"
+      ],
+      "summary": "NU_Qualitative_Analysis_2026-03-24.md** — 정성적 기업 분석 (투자 아이디어 3개, 12-Item Checklist Grade B+, Roundtable Consensus Buy Moderate-High)",
+      "attributes": {
+        "source": "local_qmd",
+        "episode_id": "episode_80a2b68935e14b43"
+      }
+    },
+    {
+      "uuid": "node_8012e26e70a54675",
+      "name": "NPL",
+      "labels": [
+        "Entity",
+        "RetailInvestor"
+      ],
+      "summary": "2. **Idea 2 (Confidence M)**: AI 언더라이팅이 진정한 모트 — \"핀테크 = 높은 NPL\" 편견 극복",
+      "attributes": {
+        "source": "local_qmd",
+        "episode_id": "episode_57840a28f6d34db8"
+      }
+    },
+    {
+      "uuid": "node_f14c500799bf43ab",
+      "name": "TAM",
+      "labels": [
+        "Entity",
+        "FundManager"
+      ],
+      "summary": "3. **Idea 3 (Confidence L)**: 미국 시장 진출 — 비연속적 TAM 확대",
+      "attributes": {
+        "source": "local_qmd",
+        "episode_id": "episode_57840a28f6d34db8"
+      }
+    },
+    {
+      "uuid": "node_d2ff686948494db1",
+      "name": "Idea 1 (Confidence H)**",
+      "labels": [
+        "Entity",
+        "InvestmentBank"
+      ],
+      "summary": "Idea 1 (Confidence H)**: ARPAC $15→$22-25 크로스셀 성장 엔진 과소평가",
+      "attributes": {
+        "source": "local_qmd",
+        "episode_id": "episode_57840a28f6d34db8"
+      }
+    },
+    {
+      "uuid": "node_a5dc98a652254a2e",
+      "name": "EPS",
+      "labels": [
+        "Entity",
+        "RetailInvestor"
+      ],
+      "summary": "| EPS | $0.18 | $0.16 | $0.12 | +50% | +13% | $0.18 | **In-line** |",
+      "attributes": {
+        "source": "local_qmd",
+        "episode_id": "episode_b58919023b1f48f5"
+      }
+    },
+    {
+      "uuid": "node_2238e574c931452f",
+      "name": "ROE",
+      "labels": [
+        "Entity",
+        "FundManager"
+      ],
+      "summary": "| ROE",
+      "attributes": {
+        "source": "local_qmd",
+        "episode_id": "episode_b58919023b1f48f5"
+      }
+    },
+    {
+      "uuid": "node_cdc2240ceb1a4575",
+      "name": "Q3 2025 수치는 추정치 포함",
+      "labels": [
+        "Entity",
+        "InvestmentBank"
+      ],
+      "summary": "Q3 2025 수치는 추정치 포함",
+      "attributes": {
+        "source": "local_qmd",
+        "episode_id": "episode_eff2c3438e5b49a5"
+      }
+    },
+    {
+      "uuid": "node_c17ec8bcc37040ed",
+      "name": "Theme 3",
+      "labels": [
+        "Entity",
+        "InvestmentAnalyst"
+      ],
+      "summary": "Theme 3: AI를 핵심 경쟁 우위로 격상 — nuFormer 모델 전면 배치",
+      "attributes": {
+        "source": "local_qmd",
+        "episode_id": "episode_7a17fd60108e44e3"
+      }
+    },
+    {
+      "uuid": "node_bfee9aa693dc4947",
+      "name": "BTG",
+      "labels": [
+        "Entity",
+        "InvestmentAnalyst"
+      ],
+      "summary": "> **Q1. Eduardo Rosman (BTG Pactual) — AI disruption risk & 신용 수익의 지속 가능성**",
+      "attributes": {
+        "source": "local_qmd",
+        "episode_id": "episode_0a64ba5719854775"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "uuid": "edge_265c411a18c74074",
+      "name": "RELATED_TO",
+      "fact": "FY2025 and CEO were co-mentioned in local source context.",
+      "source_node_uuid": "node_a5a52924a5214790",
+      "target_node_uuid": "node_3a6076c3ea754a30",
+      "attributes": {
+        "source": "local_qmd",
+        "episode_id": "episode_80a2b68935e14b43"
+      },
+      "created_at": "2026-04-24T09:51:31.317057+00:00",
+      "valid_at": null,
+      "invalid_at": null,
+      "expired_at": null,
+      "episodes": [
+        "episode_80a2b68935e14b43"
+      ]
+    },
+    {
+      "uuid": "edge_213c0c2a85494de6",
+      "name": "RELATED_TO",
+      "fact": "NPL and TAM were co-mentioned in local source context.",
+      "source_node_uuid": "node_8012e26e70a54675",
+      "target_node_uuid": "node_f14c500799bf43ab",
+      "attributes": {
+        "source": "local_qmd",
+        "episode_id": "episode_57840a28f6d34db8"
+      },
+      "created_at": "2026-04-24T09:51:31.317131+00:00",
+      "valid_at": null,
+      "invalid_at": null,
+      "expired_at": null,
+      "episodes": [
+        "episode_57840a28f6d34db8"
+      ]
+    },
+    {
+      "uuid": "edge_01174676ea6348bb",
+      "name": "RELATED_TO",
+      "fact": "EPS and ROE were co-mentioned in local source context.",
+      "source_node_uuid": "node_a5dc98a652254a2e",
+      "target_node_uuid": "node_2238e574c931452f",
+      "attributes": {
+        "source": "local_qmd",
+        "episode_id": "episode_b58919023b1f48f5"
+      },
+      "created_at": "2026-04-24T09:51:31.317270+00:00",
+      "valid_at": null,
+      "invalid_at": null,
+      "expired_at": null,
+      "episodes": [
+        "episode_b58919023b1f48f5"
+      ]
+    }
+  ]
+}
