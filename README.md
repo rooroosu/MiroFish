@@ -24,6 +24,8 @@
 
 </div>
 
+> **Fork notice — Stock Analysis variant.** This fork (`rooroosu/MiroFish`, branch `miro-fish-stock-analysis`) is maintained for equity research and stock-market prediction use cases. Upstream is [`666ghj/MiroFish`](https://github.com/666ghj/MiroFish). Domain-specific changes here (stock scenario layout under `backend/uploads/stock_scenarios/<TICKER>/`, persona seeds, signal extractors) target single-ticker and portfolio-level analysis — not the general-purpose simulation use case described upstream.
+
 ## ⚡ Overview
 
 **MiroFish** is a next-generation AI prediction engine powered by multi-agent technology. By extracting seed information from the real world (such as breaking news, policy drafts, or financial signals), it automatically constructs a high-fidelity parallel digital world. Within this space, thousands of intelligent agents with independent personalities, long-term memory, and behavioral logic freely interact and undergo social evolution. You can inject variables dynamically from a "God's-eye view" to precisely deduce future trajectories — **rehearse the future in a digital sandbox, and win decisions after countless simulations**.
